@@ -16,10 +16,10 @@ document.addEventListener('DOMContentLoaded', () => {
             } else if (route === 'servicios') {
                 const module = await import(`./modules/servicios/servicios.js`);
                 module.initServicios();
-            } else if (route === 'habitaciones') { // <--- AGREGAR ESTO
+            } else if (route === 'habitaciones') { 
                 const module = await import(`./modules/habitaciones/habitaciones.js`);
                 module.initHabitaciones();
-            }
+            } 
 
         } catch (error) {
             mainContainer.innerHTML = `<h2>Error al cargar el módulo: ${route}</h2>`;
