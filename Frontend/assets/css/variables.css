@@ -15,4 +15,11 @@
     --spacing-lg: 24px;
     --spacing-xl: 32px;
     --border-radius: 8px;
+
+    --color-bg-sidebar: #2c3e50; 
+    --color-text-sidebar: #ecf0f1;
+    --color-text-sidebar-muted: #bdc3c7; 
+    --color-active-link-bg: rgba(52, 152, 219, 0.2); 
+    
+    --icon-size-sidebar: 20px;
 }

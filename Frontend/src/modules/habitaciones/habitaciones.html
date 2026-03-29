@@ -1,0 +1,132 @@
+<link rel="stylesheet" href="./src/modules/habitaciones/habitaciones.css">
+
+<div class="habitaciones">
+    <header class="habitaciones__header">
+        <h2 class="habitaciones__title">Habitaciones del Hotel</h2>
+        <p class="habitaciones__subtitle">Consulta la disponibilidad y tipos de habitación (Tablas: Habitacion, TipoHabitacion)</p>
+    </header>
+
+    <section class="habitaciones__summary summary-board">
+        <div class="summary-card">
+            <div class="summary-card__top">
+                <span class="summary-card__title">Total</span>
+                <span class="summary-card__icon">🛏️</span>
+            </div>
+            <span class="summary-card__number" id="count-total">0</span>
+        </div>
+        <div class="summary-card">
+            <div class="summary-card__top">
+                <span class="summary-card__title">Disponibles</span>
+                <span class="summary-card__icon summary-card__icon--green">✔️</span>
+            </div>
+            <span class="summary-card__number summary-card__number--green" id="count-disponibles">0</span>
+        </div>
+        <div class="summary-card">
+            <div class="summary-card__top">
+                <span class="summary-card__title">Ocupadas</span>
+                <span class="summary-card__icon summary-card__icon--red">👥</span>
+            </div>
+            <span class="summary-card__number summary-card__number--red" id="count-ocupadas">0</span>
+        </div>
+    </section>
+
+    <nav class="habitaciones__tabs tabs-container">
+        <button class="tabs-container__btn tabs-container__btn--active" id="tab-habitaciones">Habitaciones</button>
+        <button class="tabs-container__btn" id="tab-tipos">Tipos de Habitación</button>
+    </nav>
+
+    <div id="vista-habitaciones" class="habitaciones__view habitaciones__view--active">
+        <section class="habitaciones__filters filter-bar">
+            <span class="filter-bar__icon">Y</span>
+            <span class="filter-bar__label">Filtrar por:</span>
+            <select class="filter-bar__select" id="filtro-estado">
+                <option value="Todos">Todos los estados</option>
+                <option value="Disponible">Disponible</option>
+                <option value="Ocupada">Ocupada</option>
+            </select>
+            <select class="filter-bar__select" id="filtro-tipo">
+                <option value="Todos">Todos los tipos</option>
+                </select>
+        </section>
+
+        <section class="habitaciones__grid grid-habitaciones" id="contenedor-habitaciones">
+            </section>
+    </div>
+
+    <div id="vista-tipos" class="habitaciones__view">
+        <div class="habitaciones__info-box">
+            <h3 class="habitaciones__info-title">Tipos de Habitación (Tabla: TipoHabitacion)</h3>
+            <p class="habitaciones__info-desc">Características y precios base de cada tipo (HU-05 - Definición de precios y capacidad)</p>
+        </div>
+        <section class="habitaciones__grid grid-tipos" id="contenedor-tipos">
+            </section>
+    </div>
+</div>
+
+<template id="template-amenidad">
+    <span class="amenidad-tag">
+        <span class="amenidad-tag__icon">❖</span>
+        <span class="amenidad-tag__text celda-amenidad-texto"></span>
+    </span>
+</template>
+
+<template id="template-card-habitacion">
+    <article class="card-hab">
+        <header class="card-hab__header">
+            <div>
+                <h3 class="card-hab__title celda-hab-numero"></h3>
+                <p class="card-hab__subtitle celda-hab-piso"></p>
+            </div>
+            <span class="badge-estado celda-hab-estado"></span>
+        </header>
+        <div class="card-hab__body">
+            <div class="card-hab__row">
+                <span class="card-hab__label">Tipo:</span>
+                <span class="card-hab__value celda-hab-tipo"></span>
+            </div>
+            <div class="card-hab__row">
+                <span class="card-hab__label">Capacidad:</span>
+                <span class="card-hab__value">👥 <span class="celda-hab-capacidad"></span> persona(s)</span>
+            </div>
+            <div class="card-hab__row">
+                <span class="card-hab__label">Precio/noche:</span>
+                <span class="card-hab__value card-hab__value--bold celda-hab-precio"></span>
+            </div>
+        </div>
+        <footer class="card-hab__footer">
+            <span class="card-hab__label">Amenidades:</span>
+            <div class="card-hab__amenities celda-hab-amenidades">
+                </div>
+        </footer>
+    </article>
+</template>
+
+<template id="template-card-tipo">
+    <article class="card-tipo">
+        <header class="card-tipo__header">
+            <div class="card-tipo__icon">🛏️</div>
+            <div>
+                <h3 class="card-tipo__title celda-tipo-nombre"></h3>
+                <p class="card-tipo__desc celda-tipo-desc"></p>
+            </div>
+        </header>
+        <div class="card-tipo__stats">
+            <div class="stat-box">
+                <span class="stat-box__label">Capacidad</span>
+                <span class="stat-box__value">👥 <span class="celda-tipo-capacidad"></span> persona(s)</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-box__label">Precio Base</span>
+                <span class="stat-box__value celda-tipo-precio"></span>
+            </div>
+        </div>
+        <div class="card-tipo__availability">
+            <span class="celda-tipo-disponibilidad"></span>
+        </div>
+        <footer class="card-tipo__footer">
+            <span class="card-tipo__label">Amenidades incluidas:</span>
+            <div class="card-tipo__amenities celda-tipo-amenidades">
+                </div>
+        </footer>
+    </article>
+</template>

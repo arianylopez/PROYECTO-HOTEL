@@ -89,3 +89,116 @@ body.modal-open {
     visibility: hidden;
     z-index: 1000;
 }
+
+/* --- SIDEBAR --- */
+.sidebar {
+    width: 260px;
+    background-color: var(--color-bg-surface);
+    border-right: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+}
+
+/* 1. Cabecera y Logo */
+.sidebar__header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: var(--spacing-lg);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.sidebar__logo-icon {
+    background-color: var(--color-primary);
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar__title {
+    font-size: 1.125rem;
+    color: var(--color-text-main);
+    font-weight: 600;
+}
+
+.sidebar__subtitle {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+}
+
+/* 2. Sección de Perfil */
+.sidebar__profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--spacing-xl) var(--spacing-md);
+}
+
+.sidebar__profile-img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    object-fit: cover;
+    margin-bottom: 16px;
+}
+
+.sidebar__profile-name {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--color-text-main);
+    margin-bottom: 4px;
+}
+
+.sidebar__profile-role {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+}
+
+/* 3. Navegación */
+.sidebar__nav {
+    display: flex;
+    flex-direction: column;
+    padding: 0 var(--spacing-md);
+    gap: 8px; /* Espaciado entre botones */
+}
+
+.sidebar__link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: var(--color-text-muted);
+    font-weight: 500;
+    font-size: 0.95rem;
+    border-radius: 8px; /* Botón con forma de pastilla/redondeado */
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.sidebar__icon {
+    width: 20px;
+    height: 20px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.sidebar__link:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+/* Estado Activo (Botón Azul) */
+.sidebar__link--active {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.sidebar__link--active .sidebar__icon {
+    stroke: white; /* El ícono también se vuelve blanco */
+}

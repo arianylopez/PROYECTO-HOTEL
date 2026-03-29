@@ -1,0 +1,169 @@
+.servicios {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+}
+
+.servicios__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.servicios__title {
+    font-size: 1.75rem;
+    font-weight: 500;
+    color: var(--color-text-main);
+}
+
+.servicios__subtitle {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    margin-top: 4px;
+}
+
+.servicios__count-badge {
+    background-color: #f8f9fa;
+    border: 1px solid var(--color-border);
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--color-text-main);
+}
+
+.servicios__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.card-servicio {
+    background-color: var(--color-bg-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card-servicio__header {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.card-servicio__icon-box {
+    width: 48px;
+    height: 48px;
+    background-color: rgba(26, 115, 232, 0.1);
+    color: var(--color-primary);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-servicio__header-info {
+    flex: 1;
+}
+
+.card-servicio__name {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--color-text-main);
+    margin-bottom: 4px;
+}
+
+.card-servicio__desc {
+    font-size: 0.8125rem;
+    color: var(--color-text-muted);
+    line-height: 1.4;
+}
+
+.card-servicio__body {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.info-block {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.info-block__icon {
+    color: #9aa0a6;
+    flex-shrink: 0;
+}
+
+.info-block__content {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    flex: 1;
+}
+
+.info-block__label {
+    font-size: 0.6875rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #9aa0a6;
+    letter-spacing: 0.5px;
+}
+
+.info-block__value {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color-text-main);
+}
+
+.info-block--horario {
+    position: relative;
+}
+
+.tag-estado {
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+.tag-estado--green {
+    background-color: #e8f5e9;
+    color: var(--color-success);
+}
+
+.tag-estado--blue {
+    background-color: #e3f2fd;
+    color: var(--color-primary);
+}
+
+/* Agrega esto al final de tu servicios.css existente */
+
+.info-block--con-badge {
+    justify-content: space-between; /* Para empujar el badge a la derecha */
+}
+
+/* Estilos de la etiqueta Empleado/Encargado */
+.badge-rol {
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+.badge-rol--encargado {
+    background-color: #e8eaf6; /* Azul grisáceo muy claro */
+    color: #3f51b5; /* Azul oscuro */
+}
+
+.badge-rol--empleado {
+    background-color: #e3f2fd; /* Azul celeste muy claro */
+    color: var(--color-primary); /* Azul principal */
+}

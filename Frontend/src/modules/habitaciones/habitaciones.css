@@ -1,0 +1,308 @@
+.habitaciones {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.habitaciones__header {
+    display: flex;
+    flex-direction: column;
+}
+
+.habitaciones__title {
+    font-size: 1.75rem;
+    font-weight: 500;
+    color: var(--color-text-main);
+}
+
+.habitaciones__subtitle {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    margin-top: 4px;
+}
+
+.summary-board {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+}
+
+.summary-card {
+    background-color: var(--color-bg-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.summary-card__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.summary-card__title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-text-main);
+}
+
+.summary-card__icon { font-size: 1.2rem; }
+.summary-card__icon--green { color: var(--color-success); }
+.summary-card__icon--red { color: var(--color-danger); }
+.summary-card__icon--yellow { color: var(--color-warning); }
+.summary-card__icon--blue { color: var(--color-primary); }
+
+.summary-card__number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text-main);
+}
+.summary-card__number--green { color: var(--color-success); }
+.summary-card__number--red { color: var(--color-danger); }
+.summary-card__number--yellow { color: var(--color-warning); }
+.summary-card__number--blue { color: var(--color-primary); }
+
+.tabs-container {
+    display: flex;
+    background-color: #f1f3f4;
+    padding: 4px;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.tabs-container__btn {
+    flex: 1;
+    background: transparent;
+    border: none;
+    padding: 10px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.tabs-container__btn--active {
+    background-color: var(--color-bg-surface);
+    color: var(--color-text-main);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.habitaciones__view {
+    display: none;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.habitaciones__view--active {
+    display: flex;
+}
+
+.filter-bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.filter-bar__label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-text-main);
+}
+
+.filter-bar__select {
+    padding: 8px 12px;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    background-color: var(--color-bg-surface);
+    font-size: 0.875rem;
+    color: var(--color-text-main);
+    outline: none;
+}
+
+.grid-habitaciones {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.grid-tipos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.card-hab {
+    background-color: var(--color-bg-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.card-hab__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.card-hab__title {
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+.card-hab__subtitle {
+    font-size: 0.8125rem;
+    color: var(--color-text-muted);
+}
+
+.card-hab__body {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.card-hab__row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.875rem;
+}
+
+.card-hab__label {
+    color: var(--color-text-muted);
+}
+
+.card-hab__value {
+    font-weight: 500;
+    color: var(--color-text-main);
+}
+
+.card-hab__value--bold {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.card-hab__amenities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.card-tipo {
+    background-color: var(--color-bg-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card-tipo__header {
+    display: flex;
+    gap: 16px;
+}
+
+.card-tipo__icon {
+    width: 48px;
+    height: 48px;
+    background-color: #e8f0fe;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.card-tipo__title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.card-tipo__desc {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    line-height: 1.4;
+}
+
+.card-tipo__stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.stat-box {
+    background-color: #f8f9fa;
+    padding: 12px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.stat-box__label {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+}
+
+.stat-box__value {
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+.card-tipo__availability {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.card-tipo__amenities {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.badge-estado {
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.badge-estado--Disponible { background-color: #e8f5e9; color: var(--color-success); }
+.badge-estado--Ocupada { background-color: #ffebee; color: var(--color-danger); }
+
+.amenidad-tag {
+    background-color: #f1f3f4;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    color: var(--color-text-main);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.habitaciones__info-box {
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 16px;
+    background-color: var(--color-bg-surface);
+}
+
+.habitaciones__info-title { font-size: 1rem; font-weight: 600; }
+.habitaciones__info-desc { font-size: 0.875rem; color: var(--color-text-muted); margin-top: 4px; }

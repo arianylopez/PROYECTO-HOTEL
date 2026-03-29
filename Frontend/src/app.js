@@ -13,6 +13,12 @@ document.addEventListener('DOMContentLoaded', () => {
             if (route === 'huespedes') {
                 const module = await import(`./modules/huespedes/huespedes.js`);
                 module.initHuespedes();
+            } else if (route === 'servicios') {
+                const module = await import(`./modules/servicios/servicios.js`);
+                module.initServicios();
+            } else if (route === 'habitaciones') { // <--- AGREGAR ESTO
+                const module = await import(`./modules/habitaciones/habitaciones.js`);
+                module.initHabitaciones();
             }
 
         } catch (error) {
