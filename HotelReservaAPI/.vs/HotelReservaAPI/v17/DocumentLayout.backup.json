@@ -1,0 +1,768 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|c:\\users\\arian\\onedrive\\documentos\\ucb\\5to semestre\\taller de dise\u00F1o de software 1\\proyecto-hotel\\hotelreservaapi\\hotelreservaapi\\controllers\\huespedcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|solutionrelative:hotelreservaapi\\controllers\\huespedcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|c:\\users\\arian\\onedrive\\documentos\\ucb\\5to semestre\\taller de dise\u00F1o de software 1\\proyecto-hotel\\hotelreservaapi\\hotelreservaapi\\services\\huespedservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|solutionrelative:hotelreservaapi\\services\\huespedservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|c:\\users\\arian\\onedrive\\documentos\\ucb\\5to semestre\\taller de dise\u00F1o de software 1\\proyecto-hotel\\hotelreservaapi\\hotelreservaapi\\services\\ihuespedservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|solutionrelative:hotelreservaapi\\services\\ihuespedservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|c:\\users\\arian\\onedrive\\documentos\\ucb\\5to semestre\\taller de dise\u00F1o de software 1\\proyecto-hotel\\hotelreservaapi\\hotelreservaapi\\repositories\\huespedrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|solutionrelative:hotelreservaapi\\repositories\\huespedrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|c:\\users\\arian\\onedrive\\documentos\\ucb\\5to semestre\\taller de dise\u00F1o de software 1\\proyecto-hotel\\hotelreservaapi\\hotelreservaapi\\repositories\\ihuespedrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|solutionrelative:hotelreservaapi\\repositories\\ihuespedrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|c:\\users\\arian\\onedrive\\documentos\\ucb\\5to semestre\\taller de dise\u00F1o de software 1\\proyecto-hotel\\hotelreservaapi\\hotelreservaapi\\dtos\\estadiadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|solutionrelative:hotelreservaapi\\dtos\\estadiadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|c:\\users\\arian\\onedrive\\documentos\\ucb\\5to semestre\\taller de dise\u00F1o de software 1\\proyecto-hotel\\hotelreservaapi\\hotelreservaapi\\dtos\\huespeddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|solutionrelative:hotelreservaapi\\dtos\\huespeddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|c:\\users\\arian\\onedrive\\documentos\\ucb\\5to semestre\\taller de dise\u00F1o de software 1\\proyecto-hotel\\hotelreservaapi\\hotelreservaapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|solutionrelative:hotelreservaapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|c:\\users\\arian\\onedrive\\documentos\\ucb\\5to semestre\\taller de dise\u00F1o de software 1\\proyecto-hotel\\hotelreservaapi\\hotelreservaapi\\controllers\\serviciocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|solutionrelative:hotelreservaapi\\controllers\\serviciocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|c:\\users\\arian\\onedrive\\documentos\\ucb\\5to semestre\\taller de dise\u00F1o de software 1\\proyecto-hotel\\hotelreservaapi\\hotelreservaapi\\controllers\\habitacioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|solutionrelative:hotelreservaapi\\controllers\\habitacioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|c:\\users\\arian\\onedrive\\documentos\\ucb\\5to semestre\\taller de dise\u00F1o de software 1\\proyecto-hotel\\hotelreservaapi\\hotelreservaapi\\services\\servicioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|solutionrelative:hotelreservaapi\\services\\servicioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|c:\\users\\arian\\onedrive\\documentos\\ucb\\5to semestre\\taller de dise\u00F1o de software 1\\proyecto-hotel\\hotelreservaapi\\hotelreservaapi\\services\\iservicioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|solutionrelative:hotelreservaapi\\services\\iservicioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|c:\\users\\arian\\onedrive\\documentos\\ucb\\5to semestre\\taller de dise\u00F1o de software 1\\proyecto-hotel\\hotelreservaapi\\hotelreservaapi\\services\\habitacionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|solutionrelative:hotelreservaapi\\services\\habitacionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|c:\\users\\arian\\onedrive\\documentos\\ucb\\5to semestre\\taller de dise\u00F1o de software 1\\proyecto-hotel\\hotelreservaapi\\hotelreservaapi\\services\\ihabitacionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|solutionrelative:hotelreservaapi\\services\\ihabitacionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|c:\\users\\arian\\onedrive\\documentos\\ucb\\5to semestre\\taller de dise\u00F1o de software 1\\proyecto-hotel\\hotelreservaapi\\hotelreservaapi\\repositories\\serviciorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|solutionrelative:hotelreservaapi\\repositories\\serviciorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|c:\\users\\arian\\onedrive\\documentos\\ucb\\5to semestre\\taller de dise\u00F1o de software 1\\proyecto-hotel\\hotelreservaapi\\hotelreservaapi\\repositories\\iserviciorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|solutionrelative:hotelreservaapi\\repositories\\iserviciorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|c:\\users\\arian\\onedrive\\documentos\\ucb\\5to semestre\\taller de dise\u00F1o de software 1\\proyecto-hotel\\hotelreservaapi\\hotelreservaapi\\dtos\\contactohoteldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|solutionrelative:hotelreservaapi\\dtos\\contactohoteldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|c:\\users\\arian\\onedrive\\documentos\\ucb\\5to semestre\\taller de dise\u00F1o de software 1\\proyecto-hotel\\hotelreservaapi\\hotelreservaapi\\controllers\\estadiacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|solutionrelative:hotelreservaapi\\controllers\\estadiacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|c:\\users\\arian\\onedrive\\documentos\\ucb\\5to semestre\\taller de dise\u00F1o de software 1\\proyecto-hotel\\hotelreservaapi\\hotelreservaapi\\dtos\\politicacancelaciondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|solutionrelative:hotelreservaapi\\dtos\\politicacancelaciondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|c:\\users\\arian\\onedrive\\documentos\\ucb\\5to semestre\\taller de dise\u00F1o de software 1\\proyecto-hotel\\hotelreservaapi\\hotelreservaapi\\dtos\\asignacionareadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|solutionrelative:hotelreservaapi\\dtos\\asignacionareadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|c:\\users\\arian\\onedrive\\documentos\\ucb\\5to semestre\\taller de dise\u00F1o de software 1\\proyecto-hotel\\hotelreservaapi\\hotelreservaapi\\dtos\\empleadodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|solutionrelative:hotelreservaapi\\dtos\\empleadodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|c:\\users\\arian\\onedrive\\documentos\\ucb\\5to semestre\\taller de dise\u00F1o de software 1\\proyecto-hotel\\hotelreservaapi\\hotelreservaapi\\dtos\\areaserviciodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|solutionrelative:hotelreservaapi\\dtos\\areaserviciodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|c:\\users\\arian\\onedrive\\documentos\\ucb\\5to semestre\\taller de dise\u00F1o de software 1\\proyecto-hotel\\hotelreservaapi\\hotelreservaapi\\dtos\\estadiahuespeddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|solutionrelative:hotelreservaapi\\dtos\\estadiahuespeddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|c:\\users\\arian\\onedrive\\documentos\\ucb\\5to semestre\\taller de dise\u00F1o de software 1\\proyecto-hotel\\hotelreservaapi\\hotelreservaapi\\dtos\\habitaciondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|solutionrelative:hotelreservaapi\\dtos\\habitaciondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|c:\\users\\arian\\onedrive\\documentos\\ucb\\5to semestre\\taller de dise\u00F1o de software 1\\proyecto-hotel\\hotelreservaapi\\hotelreservaapi\\dtos\\tipohabitaciondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|solutionrelative:hotelreservaapi\\dtos\\tipohabitaciondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|c:\\users\\arian\\onedrive\\documentos\\ucb\\5to semestre\\taller de dise\u00F1o de software 1\\proyecto-hotel\\hotelreservaapi\\hotelreservaapi\\hotelreservaapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|solutionrelative:hotelreservaapi\\hotelreservaapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|c:\\users\\arian\\onedrive\\documentos\\ucb\\5to semestre\\taller de dise\u00F1o de software 1\\proyecto-hotel\\hotelreservaapi\\hotelreservaapi\\.env||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|solutionrelative:hotelreservaapi\\.env||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|c:\\users\\arian\\onedrive\\documentos\\ucb\\5to semestre\\taller de dise\u00F1o de software 1\\proyecto-hotel\\hotelreservaapi\\hotelreservaapi\\services\\estadiaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|solutionrelative:hotelreservaapi\\services\\estadiaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|c:\\users\\arian\\onedrive\\documentos\\ucb\\5to semestre\\taller de dise\u00F1o de software 1\\proyecto-hotel\\hotelreservaapi\\hotelreservaapi\\services\\iestadiaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|solutionrelative:hotelreservaapi\\services\\iestadiaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|c:\\users\\arian\\onedrive\\documentos\\ucb\\5to semestre\\taller de dise\u00F1o de software 1\\proyecto-hotel\\hotelreservaapi\\hotelreservaapi\\repositories\\politicacancelacionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|solutionrelative:hotelreservaapi\\repositories\\politicacancelacionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|c:\\users\\arian\\onedrive\\documentos\\ucb\\5to semestre\\taller de dise\u00F1o de software 1\\proyecto-hotel\\hotelreservaapi\\hotelreservaapi\\repositories\\ipoliticacancelacionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|solutionrelative:hotelreservaapi\\repositories\\ipoliticacancelacionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|c:\\users\\arian\\onedrive\\documentos\\ucb\\5to semestre\\taller de dise\u00F1o de software 1\\proyecto-hotel\\hotelreservaapi\\hotelreservaapi\\repositories\\estadiarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|solutionrelative:hotelreservaapi\\repositories\\estadiarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|c:\\users\\arian\\onedrive\\documentos\\ucb\\5to semestre\\taller de dise\u00F1o de software 1\\proyecto-hotel\\hotelreservaapi\\hotelreservaapi\\repositories\\iestadiarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|solutionrelative:hotelreservaapi\\repositories\\iestadiarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|c:\\users\\arian\\onedrive\\documentos\\ucb\\5to semestre\\taller de dise\u00F1o de software 1\\proyecto-hotel\\hotelreservaapi\\hotelreservaapi\\repositories\\habitacionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|solutionrelative:hotelreservaapi\\repositories\\habitacionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|c:\\users\\arian\\onedrive\\documentos\\ucb\\5to semestre\\taller de dise\u00F1o de software 1\\proyecto-hotel\\hotelreservaapi\\hotelreservaapi\\repositories\\ihabitacionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|solutionrelative:hotelreservaapi\\repositories\\ihabitacionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|c:\\users\\arian\\onedrive\\documentos\\ucb\\5to semestre\\taller de dise\u00F1o de software 1\\proyecto-hotel\\hotelreservaapi\\hotelreservaapi\\models\\areaservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|solutionrelative:hotelreservaapi\\models\\areaservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|c:\\users\\arian\\onedrive\\documentos\\ucb\\5to semestre\\taller de dise\u00F1o de software 1\\proyecto-hotel\\hotelreservaapi\\hotelreservaapi\\models\\asignacionarea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|solutionrelative:hotelreservaapi\\models\\asignacionarea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|c:\\users\\arian\\onedrive\\documentos\\ucb\\5to semestre\\taller de dise\u00F1o de software 1\\proyecto-hotel\\hotelreservaapi\\hotelreservaapi\\models\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|solutionrelative:hotelreservaapi\\models\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|c:\\users\\arian\\onedrive\\documentos\\ucb\\5to semestre\\taller de dise\u00F1o de software 1\\proyecto-hotel\\hotelreservaapi\\hotelreservaapi\\models\\estadiahuesped.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|solutionrelative:hotelreservaapi\\models\\estadiahuesped.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|c:\\users\\arian\\onedrive\\documentos\\ucb\\5to semestre\\taller de dise\u00F1o de software 1\\proyecto-hotel\\hotelreservaapi\\hotelreservaapi\\models\\estadia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|solutionrelative:hotelreservaapi\\models\\estadia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|c:\\users\\arian\\onedrive\\documentos\\ucb\\5to semestre\\taller de dise\u00F1o de software 1\\proyecto-hotel\\hotelreservaapi\\hotelreservaapi\\models\\politicacancelacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|solutionrelative:hotelreservaapi\\models\\politicacancelacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|c:\\users\\arian\\onedrive\\documentos\\ucb\\5to semestre\\taller de dise\u00F1o de software 1\\proyecto-hotel\\hotelreservaapi\\hotelreservaapi\\models\\habitacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|solutionrelative:hotelreservaapi\\models\\habitacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|c:\\users\\arian\\onedrive\\documentos\\ucb\\5to semestre\\taller de dise\u00F1o de software 1\\proyecto-hotel\\hotelreservaapi\\hotelreservaapi\\models\\tipohabitacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|solutionrelative:hotelreservaapi\\models\\tipohabitacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|c:\\users\\arian\\onedrive\\documentos\\ucb\\5to semestre\\taller de dise\u00F1o de software 1\\proyecto-hotel\\hotelreservaapi\\hotelreservaapi\\models\\huesped.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AF6FCE8-F592-4420-832D-D93516D7C637}|HotelReservaAPI\\HotelReservaAPI.csproj|solutionrelative:hotelreservaapi\\models\\huesped.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HuespedService.cs",
+              "DocumentMoniker": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\Services\\HuespedService.cs",
+              "RelativeDocumentMoniker": "HotelReservaAPI\\Services\\HuespedService.cs",
+              "ToolTip": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\Services\\HuespedService.cs",
+              "RelativeToolTip": "HotelReservaAPI\\Services\\HuespedService.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAgwD8AAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T02:06:20.745Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HuespedController.cs",
+              "DocumentMoniker": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\Controllers\\HuespedController.cs",
+              "RelativeDocumentMoniker": "HotelReservaAPI\\Controllers\\HuespedController.cs",
+              "ToolTip": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\Controllers\\HuespedController.cs",
+              "RelativeToolTip": "HotelReservaAPI\\Controllers\\HuespedController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T02:08:57.449Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IHuespedService.cs",
+              "DocumentMoniker": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\Services\\IHuespedService.cs",
+              "RelativeDocumentMoniker": "HotelReservaAPI\\Services\\IHuespedService.cs",
+              "ToolTip": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\Services\\IHuespedService.cs",
+              "RelativeToolTip": "HotelReservaAPI\\Services\\IHuespedService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T02:05:29.852Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HuespedRepository.cs",
+              "DocumentMoniker": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\Repositories\\HuespedRepository.cs",
+              "RelativeDocumentMoniker": "HotelReservaAPI\\Repositories\\HuespedRepository.cs",
+              "ToolTip": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\Repositories\\HuespedRepository.cs",
+              "RelativeToolTip": "HotelReservaAPI\\Repositories\\HuespedRepository.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAA/wCkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T00:52:51.07Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IHuespedRepository.cs",
+              "DocumentMoniker": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\Repositories\\IHuespedRepository.cs",
+              "RelativeDocumentMoniker": "HotelReservaAPI\\Repositories\\IHuespedRepository.cs",
+              "ToolTip": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\Repositories\\IHuespedRepository.cs",
+              "RelativeToolTip": "HotelReservaAPI\\Repositories\\IHuespedRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T00:29:51.547Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EstadiaDTO.cs",
+              "DocumentMoniker": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\DTOs\\EstadiaDTO.cs",
+              "RelativeDocumentMoniker": "HotelReservaAPI\\DTOs\\EstadiaDTO.cs",
+              "ToolTip": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\DTOs\\EstadiaDTO.cs",
+              "RelativeToolTip": "HotelReservaAPI\\DTOs\\EstadiaDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T02:44:08.855Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "HuespedDTO.cs",
+              "DocumentMoniker": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\DTOs\\HuespedDTO.cs",
+              "RelativeDocumentMoniker": "HotelReservaAPI\\DTOs\\HuespedDTO.cs",
+              "ToolTip": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\DTOs\\HuespedDTO.cs",
+              "RelativeToolTip": "HotelReservaAPI\\DTOs\\HuespedDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T02:43:26.262Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\Program.cs",
+              "RelativeDocumentMoniker": "HotelReservaAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\Program.cs",
+              "RelativeToolTip": "HotelReservaAPI\\Program.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAowCsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-28T14:32:06.968Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ServicioController.cs",
+              "DocumentMoniker": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\Controllers\\ServicioController.cs",
+              "RelativeDocumentMoniker": "HotelReservaAPI\\Controllers\\ServicioController.cs",
+              "ToolTip": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\Controllers\\ServicioController.cs",
+              "RelativeToolTip": "HotelReservaAPI\\Controllers\\ServicioController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAA5wBsAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T03:06:01.456Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "HabitacionController.cs",
+              "DocumentMoniker": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\Controllers\\HabitacionController.cs",
+              "RelativeDocumentMoniker": "HotelReservaAPI\\Controllers\\HabitacionController.cs",
+              "ToolTip": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\Controllers\\HabitacionController.cs",
+              "RelativeToolTip": "HotelReservaAPI\\Controllers\\HabitacionController.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAkwEMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T03:05:48.168Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ServicioService.cs",
+              "DocumentMoniker": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\Services\\ServicioService.cs",
+              "RelativeDocumentMoniker": "HotelReservaAPI\\Services\\ServicioService.cs",
+              "ToolTip": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\Services\\ServicioService.cs",
+              "RelativeToolTip": "HotelReservaAPI\\Services\\ServicioService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T03:05:33.608Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "IServicioService.cs",
+              "DocumentMoniker": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\Services\\IServicioService.cs",
+              "RelativeDocumentMoniker": "HotelReservaAPI\\Services\\IServicioService.cs",
+              "ToolTip": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\Services\\IServicioService.cs",
+              "RelativeToolTip": "HotelReservaAPI\\Services\\IServicioService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T03:05:21.871Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "HabitacionService.cs",
+              "DocumentMoniker": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\Services\\HabitacionService.cs",
+              "RelativeDocumentMoniker": "HotelReservaAPI\\Services\\HabitacionService.cs",
+              "ToolTip": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\Services\\HabitacionService.cs",
+              "RelativeToolTip": "HotelReservaAPI\\Services\\HabitacionService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T03:05:07.076Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IHabitacionService.cs",
+              "DocumentMoniker": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\Services\\IHabitacionService.cs",
+              "RelativeDocumentMoniker": "HotelReservaAPI\\Services\\IHabitacionService.cs",
+              "ToolTip": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\Services\\IHabitacionService.cs",
+              "RelativeToolTip": "HotelReservaAPI\\Services\\IHabitacionService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T03:04:50.713Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ServicioRepository.cs",
+              "DocumentMoniker": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\Repositories\\ServicioRepository.cs",
+              "RelativeDocumentMoniker": "HotelReservaAPI\\Repositories\\ServicioRepository.cs",
+              "ToolTip": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\Repositories\\ServicioRepository.cs",
+              "RelativeToolTip": "HotelReservaAPI\\Repositories\\ServicioRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T03:04:07.084Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "IServicioRepository.cs",
+              "DocumentMoniker": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\Repositories\\IServicioRepository.cs",
+              "RelativeDocumentMoniker": "HotelReservaAPI\\Repositories\\IServicioRepository.cs",
+              "ToolTip": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\Repositories\\IServicioRepository.cs",
+              "RelativeToolTip": "HotelReservaAPI\\Repositories\\IServicioRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T03:03:53.829Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ContactoHotelDTO.cs",
+              "DocumentMoniker": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\DTOs\\ContactoHotelDTO.cs",
+              "RelativeDocumentMoniker": "HotelReservaAPI\\DTOs\\ContactoHotelDTO.cs",
+              "ToolTip": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\DTOs\\ContactoHotelDTO.cs",
+              "RelativeToolTip": "HotelReservaAPI\\DTOs\\ContactoHotelDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T03:03:34.384Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "EstadiaController.cs",
+              "DocumentMoniker": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\Controllers\\EstadiaController.cs",
+              "RelativeDocumentMoniker": "HotelReservaAPI\\Controllers\\EstadiaController.cs",
+              "ToolTip": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\Controllers\\EstadiaController.cs",
+              "RelativeToolTip": "HotelReservaAPI\\Controllers\\EstadiaController.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAkwFoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T02:09:11.001Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "PoliticaCancelacionDTO.cs",
+              "DocumentMoniker": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\DTOs\\PoliticaCancelacionDTO.cs",
+              "RelativeDocumentMoniker": "HotelReservaAPI\\DTOs\\PoliticaCancelacionDTO.cs",
+              "ToolTip": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\DTOs\\PoliticaCancelacionDTO.cs",
+              "RelativeToolTip": "HotelReservaAPI\\DTOs\\PoliticaCancelacionDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T02:45:20.775Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "AsignacionAreaDTO.cs",
+              "DocumentMoniker": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\DTOs\\AsignacionAreaDTO.cs",
+              "RelativeDocumentMoniker": "HotelReservaAPI\\DTOs\\AsignacionAreaDTO.cs",
+              "ToolTip": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\DTOs\\AsignacionAreaDTO.cs",
+              "RelativeToolTip": "HotelReservaAPI\\DTOs\\AsignacionAreaDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T02:45:08.682Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "EmpleadoDTO.cs",
+              "DocumentMoniker": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\DTOs\\EmpleadoDTO.cs",
+              "RelativeDocumentMoniker": "HotelReservaAPI\\DTOs\\EmpleadoDTO.cs",
+              "ToolTip": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\DTOs\\EmpleadoDTO.cs",
+              "RelativeToolTip": "HotelReservaAPI\\DTOs\\EmpleadoDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T02:44:55.086Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "AreaServicioDTO.cs",
+              "DocumentMoniker": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\DTOs\\AreaServicioDTO.cs",
+              "RelativeDocumentMoniker": "HotelReservaAPI\\DTOs\\AreaServicioDTO.cs",
+              "ToolTip": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\DTOs\\AreaServicioDTO.cs",
+              "RelativeToolTip": "HotelReservaAPI\\DTOs\\AreaServicioDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T02:44:40.257Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "EstadiaHuespedDTO.cs",
+              "DocumentMoniker": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\DTOs\\EstadiaHuespedDTO.cs",
+              "RelativeDocumentMoniker": "HotelReservaAPI\\DTOs\\EstadiaHuespedDTO.cs",
+              "ToolTip": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\DTOs\\EstadiaHuespedDTO.cs",
+              "RelativeToolTip": "HotelReservaAPI\\DTOs\\EstadiaHuespedDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T02:44:20.468Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "HabitacionDTO.cs",
+              "DocumentMoniker": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\DTOs\\HabitacionDTO.cs",
+              "RelativeDocumentMoniker": "HotelReservaAPI\\DTOs\\HabitacionDTO.cs",
+              "ToolTip": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\DTOs\\HabitacionDTO.cs",
+              "RelativeToolTip": "HotelReservaAPI\\DTOs\\HabitacionDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T02:43:57.333Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "TipoHabitacionDTO.cs",
+              "DocumentMoniker": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\DTOs\\TipoHabitacionDTO.cs",
+              "RelativeDocumentMoniker": "HotelReservaAPI\\DTOs\\TipoHabitacionDTO.cs",
+              "ToolTip": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\DTOs\\TipoHabitacionDTO.cs",
+              "RelativeToolTip": "HotelReservaAPI\\DTOs\\TipoHabitacionDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T02:43:40.875Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": ".env",
+              "DocumentMoniker": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\.env",
+              "RelativeDocumentMoniker": "HotelReservaAPI\\.env",
+              "ToolTip": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\.env",
+              "RelativeToolTip": "HotelReservaAPI\\.env",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-03-28T14:30:18.384Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "HotelReservaAPI.csproj",
+              "DocumentMoniker": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\HotelReservaAPI.csproj",
+              "RelativeDocumentMoniker": "HotelReservaAPI\\HotelReservaAPI.csproj",
+              "ToolTip": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\HotelReservaAPI.csproj",
+              "RelativeToolTip": "HotelReservaAPI\\HotelReservaAPI.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-03-28T14:27:40.349Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "IEstadiaService.cs",
+              "DocumentMoniker": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\Services\\IEstadiaService.cs",
+              "RelativeDocumentMoniker": "HotelReservaAPI\\Services\\IEstadiaService.cs",
+              "ToolTip": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\Services\\IEstadiaService.cs",
+              "RelativeToolTip": "HotelReservaAPI\\Services\\IEstadiaService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T02:06:35.914Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "EstadiaService.cs",
+              "DocumentMoniker": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\Services\\EstadiaService.cs",
+              "RelativeDocumentMoniker": "HotelReservaAPI\\Services\\EstadiaService.cs",
+              "ToolTip": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\Services\\EstadiaService.cs",
+              "RelativeToolTip": "HotelReservaAPI\\Services\\EstadiaService.cs",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAkwGMAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T02:07:08.202Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "PoliticaCancelacionRepository.cs",
+              "DocumentMoniker": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\Repositories\\PoliticaCancelacionRepository.cs",
+              "RelativeDocumentMoniker": "HotelReservaAPI\\Repositories\\PoliticaCancelacionRepository.cs",
+              "ToolTip": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\Repositories\\PoliticaCancelacionRepository.cs",
+              "RelativeToolTip": "HotelReservaAPI\\Repositories\\PoliticaCancelacionRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T01:58:16.677Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "IPoliticaCancelacionRepository.cs",
+              "DocumentMoniker": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\Repositories\\IPoliticaCancelacionRepository.cs",
+              "RelativeDocumentMoniker": "HotelReservaAPI\\Repositories\\IPoliticaCancelacionRepository.cs",
+              "ToolTip": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\Repositories\\IPoliticaCancelacionRepository.cs",
+              "RelativeToolTip": "HotelReservaAPI\\Repositories\\IPoliticaCancelacionRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T01:57:39.024Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "IEstadiaRepository.cs",
+              "DocumentMoniker": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\Repositories\\IEstadiaRepository.cs",
+              "RelativeDocumentMoniker": "HotelReservaAPI\\Repositories\\IEstadiaRepository.cs",
+              "ToolTip": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\Repositories\\IEstadiaRepository.cs",
+              "RelativeToolTip": "HotelReservaAPI\\Repositories\\IEstadiaRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T00:54:31.215Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "EstadiaRepository.cs",
+              "DocumentMoniker": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\Repositories\\EstadiaRepository.cs",
+              "RelativeDocumentMoniker": "HotelReservaAPI\\Repositories\\EstadiaRepository.cs",
+              "ToolTip": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\Repositories\\EstadiaRepository.cs",
+              "RelativeToolTip": "HotelReservaAPI\\Repositories\\EstadiaRepository.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwBgAAABkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T00:54:50.943Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "HabitacionRepository.cs",
+              "DocumentMoniker": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\Repositories\\HabitacionRepository.cs",
+              "RelativeDocumentMoniker": "HotelReservaAPI\\Repositories\\HabitacionRepository.cs",
+              "ToolTip": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\Repositories\\HabitacionRepository.cs",
+              "RelativeToolTip": "HotelReservaAPI\\Repositories\\HabitacionRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T00:53:55.586Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "IHabitacionRepository.cs",
+              "DocumentMoniker": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\Repositories\\IHabitacionRepository.cs",
+              "RelativeDocumentMoniker": "HotelReservaAPI\\Repositories\\IHabitacionRepository.cs",
+              "ToolTip": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\Repositories\\IHabitacionRepository.cs",
+              "RelativeToolTip": "HotelReservaAPI\\Repositories\\IHabitacionRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T00:53:14.449Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "AsignacionArea.cs",
+              "DocumentMoniker": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\Models\\AsignacionArea.cs",
+              "RelativeDocumentMoniker": "HotelReservaAPI\\Models\\AsignacionArea.cs",
+              "ToolTip": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\Models\\AsignacionArea.cs",
+              "RelativeToolTip": "HotelReservaAPI\\Models\\AsignacionArea.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T00:07:29.033Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "Empleado.cs",
+              "DocumentMoniker": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\Models\\Empleado.cs",
+              "RelativeDocumentMoniker": "HotelReservaAPI\\Models\\Empleado.cs",
+              "ToolTip": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\Models\\Empleado.cs",
+              "RelativeToolTip": "HotelReservaAPI\\Models\\Empleado.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T00:07:08.44Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "AreaServicio.cs",
+              "DocumentMoniker": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\Models\\AreaServicio.cs",
+              "RelativeDocumentMoniker": "HotelReservaAPI\\Models\\AreaServicio.cs",
+              "ToolTip": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\Models\\AreaServicio.cs",
+              "RelativeToolTip": "HotelReservaAPI\\Models\\AreaServicio.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T00:06:51.091Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "EstadiaHuesped.cs",
+              "DocumentMoniker": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\Models\\EstadiaHuesped.cs",
+              "RelativeDocumentMoniker": "HotelReservaAPI\\Models\\EstadiaHuesped.cs",
+              "ToolTip": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\Models\\EstadiaHuesped.cs",
+              "RelativeToolTip": "HotelReservaAPI\\Models\\EstadiaHuesped.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T00:06:21.137Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "Estadia.cs",
+              "DocumentMoniker": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\Models\\Estadia.cs",
+              "RelativeDocumentMoniker": "HotelReservaAPI\\Models\\Estadia.cs",
+              "ToolTip": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\Models\\Estadia.cs",
+              "RelativeToolTip": "HotelReservaAPI\\Models\\Estadia.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAqwA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T00:06:02.117Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "PoliticaCancelacion.cs",
+              "DocumentMoniker": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\Models\\PoliticaCancelacion.cs",
+              "RelativeDocumentMoniker": "HotelReservaAPI\\Models\\PoliticaCancelacion.cs",
+              "ToolTip": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\Models\\PoliticaCancelacion.cs",
+              "RelativeToolTip": "HotelReservaAPI\\Models\\PoliticaCancelacion.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T00:05:46.517Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "Habitacion.cs",
+              "DocumentMoniker": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\Models\\Habitacion.cs",
+              "RelativeDocumentMoniker": "HotelReservaAPI\\Models\\Habitacion.cs",
+              "ToolTip": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\Models\\Habitacion.cs",
+              "RelativeToolTip": "HotelReservaAPI\\Models\\Habitacion.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T00:05:28.073Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "TipoHabitacion.cs",
+              "DocumentMoniker": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\Models\\TipoHabitacion.cs",
+              "RelativeDocumentMoniker": "HotelReservaAPI\\Models\\TipoHabitacion.cs",
+              "ToolTip": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\Models\\TipoHabitacion.cs",
+              "RelativeToolTip": "HotelReservaAPI\\Models\\TipoHabitacion.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T00:05:10.31Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "Huesped.cs",
+              "DocumentMoniker": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\Models\\Huesped.cs",
+              "RelativeDocumentMoniker": "HotelReservaAPI\\Models\\Huesped.cs",
+              "ToolTip": "C:\\Users\\arian\\OneDrive\\Documentos\\UCB\\5TO SEMESTRE\\TALLER DE DISE\u00D1O DE SOFTWARE 1\\PROYECTO-HOTEL\\HotelReservaAPI\\HotelReservaAPI\\Models\\Huesped.cs",
+              "RelativeToolTip": "HotelReservaAPI\\Models\\Huesped.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAzwBIAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T00:02:14.897Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
