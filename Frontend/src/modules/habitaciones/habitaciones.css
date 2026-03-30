@@ -49,21 +49,46 @@
     color: var(--color-text-main);
 }
 
-.summary-card__icon { font-size: 1.2rem; }
-.summary-card__icon--green { color: var(--color-success); }
-.summary-card__icon--red { color: var(--color-danger); }
-.summary-card__icon--yellow { color: var(--color-warning); }
-.summary-card__icon--blue { color: var(--color-primary); }
+.summary-card__icon { 
+    font-size: 1.2rem; 
+}
+
+.summary-card__icon--green { 
+    color: var(--color-success); 
+}
+
+.summary-card__icon--red { 
+    color: var(--color-danger); 
+}
+
+.summary-card__icon--yellow { 
+    color: var(--color-warning); 
+}
+
+.summary-card__icon--blue { 
+    color: var(--color-primary); 
+}
 
 .summary-card__number {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--color-text-main);
 }
-.summary-card__number--green { color: var(--color-success); }
-.summary-card__number--red { color: var(--color-danger); }
-.summary-card__number--yellow { color: var(--color-warning); }
-.summary-card__number--blue { color: var(--color-primary); }
+.summary-card__number--green { 
+    color: var(--color-success); 
+}
+
+.summary-card__number--red { 
+    color: var(--color-danger); 
+}
+
+.summary-card__number--yellow { 
+    color: var(--color-warning); 
+}
+
+.summary-card__number--blue { 
+    color: var(--color-primary); 
+}
 
 .tabs-container {
     display: flex;
@@ -283,8 +308,15 @@
     font-weight: 600;
 }
 
-.badge-estado--Disponible { background-color: #e8f5e9; color: var(--color-success); }
-.badge-estado--Ocupada { background-color: #ffebee; color: var(--color-danger); }
+.badge-estado--Disponible { 
+    background-color: #e8f5e9; 
+    color: var(--color-success); 
+}
+
+.badge-estado--Ocupada { 
+    background-color: #ffebee; 
+    color: var(--color-danger); 
+}
 
 .amenidad-tag {
     background-color: #f1f3f4;
@@ -304,5 +336,13 @@
     background-color: var(--color-bg-surface);
 }
 
-.habitaciones__info-title { font-size: 1rem; font-weight: 600; }
-.habitaciones__info-desc { font-size: 0.875rem; color: var(--color-text-muted); margin-top: 4px; }
+.habitaciones__info-title { 
+    font-size: 1rem; 
+    font-weight: 600; 
+}
+
+.habitaciones__info-desc { 
+    font-size: 0.875rem; 
+    color: var(--color-text-muted); 
+    margin-top: 4px; 
+}

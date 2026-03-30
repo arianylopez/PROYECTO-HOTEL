@@ -2,9 +2,11 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using HotelReservaAPI.Models;
 using HotelReservaAPI.Services;
 using HotelReservaAPI.DTOs;
+using Supabase;
 
 namespace HotelReservaAPI.Controllers
 {
@@ -13,10 +15,12 @@ namespace HotelReservaAPI.Controllers
     public class EstadiaController : ControllerBase
     {
         private readonly IEstadiaService _estadiaService;
+        private readonly Client _supabase;
 
-        public EstadiaController(IEstadiaService estadiaService)
+        public EstadiaController(IEstadiaService estadiaService, Client supabase)
         {
             _estadiaService = estadiaService;
+            _supabase = supabase;
         }
 
         [HttpGet("activas")]
@@ -25,13 +29,41 @@ namespace HotelReservaAPI.Controllers
             try
             {
                 var reservas = _estadiaService.ObtenerReservasActivasYFuturas();
-
                 var reservasDTO = reservas.Select(r => MapearAEstadiaDTO(r)).ToList();
-
                 return Ok(reservasDTO);
             }
             catch (Exception ex)
             {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpGet]
+        public async Task<ActionResult<List<EstadiaDTO>>> ObtenerTodas()
+        {
+            try
+            {
+                var estadias = _estadiaService.ObtenerTodas();
+
+                var response = await _supabase.From<EstadiaHuesped>().Get();
+                var relaciones = response.Models ?? new List<EstadiaHuesped>();
+
+                var estadiasDTO = estadias.Select(e => {
+                    var dto = MapearAEstadiaDTO(e);
+
+                    dto.AcompanantesIds = relaciones
+                        .Where(r => r.EstadiaId == e.EstadiaId)
+                        .Select(r => r.HuespedId)
+                        .ToList();
+
+                    return dto;
+                }).ToList();
+
+                return Ok(estadiasDTO);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error en ObtenerTodas: " + ex.Message);
                 return BadRequest(ex.Message);
             }
         }
@@ -48,11 +80,14 @@ namespace HotelReservaAPI.Controllers
                     FechaIngreso = estadiaDTO.FechaIngreso,
                     FechaSalida = estadiaDTO.FechaSalida,
                     CantidadPersonas = estadiaDTO.CantidadPersonas,
-                    Observaciones = estadiaDTO.Observaciones
+                    Observaciones = estadiaDTO.Observaciones,
+                    Estado = "Reservada",
+                    FechaCreacion = DateTime.UtcNow,
+                    PrecioAplicado = 0,
+                    Mora = 0
                 };
 
                 var creada = _estadiaService.CrearReserva(estadia);
-
                 return Ok(MapearAEstadiaDTO(creada));
             }
             catch (Exception ex)
@@ -62,12 +97,26 @@ namespace HotelReservaAPI.Controllers
         }
 
         [HttpPut("{id}/checkin")]
-        public ActionResult<EstadiaDTO> RegistrarCheckIn(string id)
+        public ActionResult<EstadiaDTO> RegistrarCheckIn(string id, [FromBody] CheckInDTO checkInRequest)
         {
             try
             {
-                var actualizada = _estadiaService.RegistrarCheckIn(id);
-                return Ok(MapearAEstadiaDTO(actualizada));
+                var estadia = _estadiaService.RegistrarCheckIn(id, checkInRequest.AcompanantesIds ?? new List<string>());
+                return Ok(MapearAEstadiaDTO(estadia));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpPut("{id}/checkout")]
+        public ActionResult<EstadiaDTO> RegistrarCheckOut(string id)
+        {
+            try
+            {
+                var estadia = _estadiaService.RegistrarCheckOut(id);
+                return Ok(MapearAEstadiaDTO(estadia));
             }
             catch (Exception ex)
             {

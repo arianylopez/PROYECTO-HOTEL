@@ -7,7 +7,7 @@ namespace HotelReservaAPI.Models
     public class EstadiaHuesped : BaseModel
     {
         [PrimaryKey("estadia_acompañante_id", false)]
-        public string EstadiaAcompañanteId { get; set; }
+        public string EstadiaAcompananteId { get; set; }
 
         [Column("estadia_id")]
         public string EstadiaId { get; set; }

@@ -49,7 +49,7 @@ namespace HotelReservaAPI.Controllers
             }
         }
 
-        [HttpPut("{id}")] // Nuevo Endpoint para editar
+        [HttpPut("{id}")] 
         public ActionResult<HuespedDTO> ActualizarHuesped(string id, [FromBody] HuespedDTO huespedDTO)
         {
             try

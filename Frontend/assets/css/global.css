@@ -90,7 +90,6 @@ body.modal-open {
     z-index: 1000;
 }
 
-/* --- SIDEBAR --- */
 .sidebar {
     width: 260px;
     background-color: var(--color-bg-surface);
@@ -99,7 +98,6 @@ body.modal-open {
     flex-direction: column;
 }
 
-/* 1. Cabecera y Logo */
 .sidebar__header {
     display: flex;
     align-items: center;
@@ -129,7 +127,6 @@ body.modal-open {
     color: var(--color-text-muted);
 }
 
-/* 2. Sección de Perfil */
 .sidebar__profile {
     display: flex;
     flex-direction: column;
@@ -158,12 +155,11 @@ body.modal-open {
     color: var(--color-text-muted);
 }
 
-/* 3. Navegación */
 .sidebar__nav {
     display: flex;
     flex-direction: column;
     padding: 0 var(--spacing-md);
-    gap: 8px; /* Espaciado entre botones */
+    gap: 8px; 
 }
 
 .sidebar__link {
@@ -175,7 +171,7 @@ body.modal-open {
     color: var(--color-text-muted);
     font-weight: 500;
     font-size: 0.95rem;
-    border-radius: 8px; /* Botón con forma de pastilla/redondeado */
+    border-radius: 8px;
     transition: background-color 0.2s, color 0.2s;
 }
 
@@ -193,12 +189,11 @@ body.modal-open {
     background-color: rgba(0, 0, 0, 0.04);
 }
 
-/* Estado Activo (Botón Azul) */
 .sidebar__link--active {
     background-color: var(--color-primary);
     color: white;
 }
 
 .sidebar__link--active .sidebar__icon {
-    stroke: white; /* El ícono también se vuelve blanco */
+    stroke: white;
 }

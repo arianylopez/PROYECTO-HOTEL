@@ -7,7 +7,9 @@ namespace HotelReservaAPI.Services
     {
         Estadia CrearReserva(Estadia estadia);
         List<Estadia> ObtenerReservasActivasYFuturas();
-        Estadia RegistrarCheckIn(string estadiaId);
+        List<Estadia> ObtenerTodas();
+        Estadia RegistrarCheckIn(string estadiaId, List<string> acompanantesIds);
+        Estadia RegistrarCheckOut(string estadiaId);
         Estadia CancelarReserva(string estadiaId);
     }
 }

@@ -27,20 +27,21 @@ namespace HotelReservaAPI.Controllers
                 var empleados = _servicioService.ObtenerEmpleados();
                 var asignaciones = _servicioService.ObtenerAsignaciones();
 
-                var contactos = areas.Select(area =>
+                var contactos = asignaciones.Select(a =>
                 {
-                    var asignacionEncargado = asignaciones.FirstOrDefault(a => a.AreaId == area.AreaId && a.EsEncargado);
-                    var encargado = asignacionEncargado != null ? empleados.FirstOrDefault(e => e.EmpleadoId == asignacionEncargado.EmpleadoId) : null;
+                    var area = areas.FirstOrDefault(ar => ar.AreaId == a.AreaId);
+                    var empleado = empleados.FirstOrDefault(e => e.EmpleadoId == a.EmpleadoId);
 
                     return new ContactoHotelDTO
                     {
-                        NombreArea = area.NombreArea,
-                        Descripcion = area.Descripcion,
-                        HorarioAtencion = area.HorarioAtencion,
-                        Ubicacion = area.Ubicacion,
-                        EncargadoNombre = encargado != null ? encargado.NombreEmpleado : "Sin asignar",
-                        EncargadoTelefono = encargado != null ? encargado.Telefono : "N/A",
-                        EncargadoEmail = encargado != null ? encargado.Email : "N/A"
+                        NombreArea = area?.NombreArea ?? "Área sin nombre",
+                        Descripcion = area?.Descripcion ?? "",
+                        HorarioAtencion = area?.HorarioAtencion ?? "No definido",
+                        Ubicacion = area?.Ubicacion ?? "No definida",
+                        EmpleadoNombre = empleado?.NombreEmpleado ?? "Empleado Desconocido",
+                        EmpleadoTelefono = empleado?.Telefono ?? "S/N",
+                        EmpleadoEmail = empleado?.Email ?? "S/C",
+                        EsEncargado = a.EsEncargado
                     };
                 }).ToList();
 

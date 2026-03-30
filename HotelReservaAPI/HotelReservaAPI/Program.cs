@@ -28,13 +28,11 @@ namespace HotelReservaAPI
 
             builder.Services.AddSingleton(provider => new Supabase.Client(supabaseUrl, supabaseKey, options));
 
-            // Inyección de Dependencias de Repositorios
             builder.Services.AddScoped<HotelReservaAPI.Repositories.IHuespedRepository, HotelReservaAPI.Repositories.HuespedRepository>();
             builder.Services.AddScoped<HotelReservaAPI.Repositories.IHabitacionRepository, HotelReservaAPI.Repositories.HabitacionRepository>();
             builder.Services.AddScoped<HotelReservaAPI.Repositories.IEstadiaRepository, HotelReservaAPI.Repositories.EstadiaRepository>();
             builder.Services.AddScoped<HotelReservaAPI.Repositories.IPoliticaCancelacionRepository, HotelReservaAPI.Repositories.PoliticaCancelacionRepository>();
 
-            // Inyección de Dependencias de Servicios (los crearemos a continuación)
             builder.Services.AddScoped<HotelReservaAPI.Services.IHuespedService, HotelReservaAPI.Services.HuespedService>();
             builder.Services.AddScoped<HotelReservaAPI.Services.IEstadiaService, HotelReservaAPI.Services.EstadiaService>();
 

@@ -115,7 +115,7 @@ export async function initHuespedes() {
     btnCerrarModal.addEventListener('click', cerrarModal);
     btnCerrarModalX.addEventListener('click', cerrarModal);
     modalOverlay.addEventListener('click', cerrarModal);
-    inputBusqueda.addEventListener('input', ejecutarBusqueda); // Búsqueda en tiempo real
+    inputBusqueda.addEventListener('input', ejecutarBusqueda);
 
     form.addEventListener('submit', async (e) => {
         e.preventDefault();

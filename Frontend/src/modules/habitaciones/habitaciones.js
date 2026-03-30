@@ -67,7 +67,8 @@ export async function initHabitaciones() {
             const tarjeta = templateHab.cloneNode(true);
             const tipoObj = todosLosTipos.find(t => t.tipoHabitacionId === hab.tipoHabitacionId) || {};
 
-            inyectarTextoSeguro(tarjeta, '.celda-hab-numero', `Hab. ${hab.numeroHabitacion}`);
+            const numHabLimpio = String(hab.numeroHabitacion).replace(/Hab\.?\s*/i, '').trim();
+            inyectarTextoSeguro(tarjeta, '.celda-hab-numero', `Hab. ${numHabLimpio}`);
             inyectarTextoSeguro(tarjeta, '.celda-hab-piso', `Piso ${hab.piso}`);
             inyectarTextoSeguro(tarjeta, '.celda-hab-tipo', tipoObj.nombre || 'Desconocido');
             inyectarTextoSeguro(tarjeta, '.celda-hab-capacidad', tipoObj.capacidad || '0');

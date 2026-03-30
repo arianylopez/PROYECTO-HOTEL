@@ -144,13 +144,11 @@
     color: var(--color-primary);
 }
 
-/* Agrega esto al final de tu servicios.css existente */
 
 .info-block--con-badge {
-    justify-content: space-between; /* Para empujar el badge a la derecha */
+    justify-content: space-between; 
 }
 
-/* Estilos de la etiqueta Empleado/Encargado */
 .badge-rol {
     padding: 4px 12px;
     border-radius: 12px;
@@ -159,11 +157,11 @@
 }
 
 .badge-rol--encargado {
-    background-color: #e8eaf6; /* Azul grisáceo muy claro */
-    color: #3f51b5; /* Azul oscuro */
+    background-color: #e8eaf6; 
+    color: #3f51b5;
 }
 
 .badge-rol--empleado {
-    background-color: #e3f2fd; /* Azul celeste muy claro */
-    color: var(--color-primary); /* Azul principal */
+    background-color: #e3f2fd; 
+    color: var(--color-primary); 
 }
