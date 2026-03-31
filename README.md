@@ -154,3 +154,135 @@ El prototipo actual cubre el flujo principal de operación de la recepción del 
   - **Funcionalidad:** Una vista de solo lectura que lista los contactos clave del staff y áreas de apoyo operativo del hotel (ej. Encargados de Mantenimiento, Limpieza o Seguridad) junto con sus números de teléfono.
 
   - **Contribución al objetivo:** Mejora la comunicación interna. La recepcionista tiene acceso inmediato a los canales de soporte para resolver cualquier incidencia del huésped sin tener que abandonar el sistema.
+
+## Estructura del Proyecto 
+El código fuente de este proyecto ha sido organizado siguiendo el principio de Separación de Responsabilidades (Separation of Concerns). Esta estructura modular no solo facilita la lectura y el mantenimiento del código, sino que permite escalar la aplicación en el futuro sin generar dependencias cruzadas ("código espagueti").
+
+El repositorio se divide en dos grandes bloques principales: **Frontend** y **HotelReservaAPI** (Backend).
+
+### Estructura del Frontend (Vanilla JS)
+El cliente web está diseñado bajo una arquitectura basada en Módulos, donde cada dominio del negocio tiene su propia carpeta encapsulando su vista (HTML), sus estilos específicos (CSS) y su lógica (JS).
+
+```
+Frontend/
+├── assets/                  # Recursos globales
+│   └── css/                 # Estilos globales y variables de diseño (variables.css, global.css)
+├── src/                     # Código fuente principal
+│   ├── core/                # Configuraciones nucleares
+│   │   └── api.js           # Cliente HTTP centralizado (Manejo de peticiones al Backend)
+│   ├── modules/             # Módulos funcionales de la aplicación
+│   │   ├── habitaciones/    # Lógica, vista y estilos de la gestión de habitaciones
+│   │   ├── huespedes/       # CRUD de huéspedes (HuespedService.js, huespedes.html, etc.)
+│   │   ├── reservas/        # Motor de creación y visualización de reservas/estadías
+│   │   └── servicios/       # Directorio de áreas y personal del hotel
+│   └── patterns/            # Implementación de Patrones de Diseño en JS
+│       └── TipoHabitacionStrategy.js  # Lógica dinámica para la variación de habitaciones
+├── index.html               # Punto de entrada principal (Contenedor de la SPA)
+└── app.js                   # Enrutador y controlador principal de inicialización
+```
+
+### Estructura del Backend (API C# .NET)
+La API sigue estrictamente una arquitectura en Capas (N-Tier) aplicando los patrones MVC, Repository y Service.
+
+```
+HotelReservaAPI/
+├── Controllers/             # Controladores (Capa de Presentación de la API)
+│   ├── EstadiaController.cs # Expone los endpoints para Reservas, Check-in y Cancelaciones
+│   ├── HuespedController.cs # Expone los endpoints para el registro y búsqueda de clientes
+│   └── ...
+├── Services/                # Capa de Lógica de Negocio (Reglas, Validaciones y Patrones)
+│   ├── IEstadiaService.cs   # Interfaces (Contratos)
+│   ├── EstadiaService.cs    # Implementación (Validación de solapamientos, cálculo de mora)
+│   └── ...
+├── Repositories/            # Capa de Acceso a Datos (Consultas SQL/Entity Framework)
+│   ├── IEstadiaRepository.cs
+│   ├── EstadiaRepository.cs # Ejecuta las operaciones directamente contra Supabase
+│   └── ...
+├── Models/                  # Entidades de Dominio (Mapeo exacto con las tablas de BD)
+│   ├── Estadia.cs
+│   ├── Huesped.cs
+│   └── ...
+├── DTOs/                    # Data Transfer Objects (Objetos de Transferencia de Datos)
+│   ├── EstadiaDTO.cs        # Define y filtra la información exacta que entra/sale de la API
+│   └── ...
+├── .env                     # Archivo de configuración global (Cadenas de conexión a BD)
+└── Program.cs               # Archivo de arranque (Configuración de Inyección de Dependencias y CORS)
+```
+
+## Instrucciones para ejecutar el sistema desde cero
+A continuación, se detallan los pasos necesarios para clonar, configurar y ejecutar este proyecto en tu entorno local.
+
+### Prerrequisitos
+Antes de comenzar, asegúrate de tener instaladas las siguientes herramientas en tu computadora:
+
+- **Git:** Para clonar el repositorio.
+
+- **.NET SDK (v7.0 u 8.0):** Necesario para compilar y ejecutar la API backend en C#.
+
+- **Visual Studio 2022 o Visual Studio Code:** Entorno de desarrollo recomendado.
+
+- **Cuenta en Supabase:** Para alojar y gestionar la base de datos PostgreSQL en la nube.
+
+**Paso 1: Clonar el repositorio**
+Abre tu terminal o línea de comandos y ejecuta la siguiente instrucción para descargar el código fuente en tu equipo:
+
+```
+git clone https://github.com/arianylopez/PROYECTO-HOTEL.git
+cd PROYECTO-HOTEL
+```
+
+**Paso 2: Configurar la Base de Datos (Supabase)**
+Este sistema utiliza Supabase como proveedor de base de datos relacional (PostgreSQL).
+
+1. Ingresa a Supabase y crea un nuevo proyecto.
+
+2. Ve al apartado "SQL Editor", copia y pega el contenido del archivo que se encuentra en el archivo BDD
+
+3. Ve a la configuración de la base de datos (Connect) y copia tu Connection String (Cadena de conexión) o tus claves de acceso (URL y API Key), dependiendo de cómo esté configurada la conexión en el proyecto.
+
+**Paso 3: Configurar y Levantar el Backend (API REST)**
+El motor principal del sistema está construido en C# .NET. Debes conectar la API con tu base de datos recién creada.
+
+1. Navega hacia la carpeta del backend desde tu terminal:
+
+```
+cd HotelReservaAPI/HotelReservaAPI
+```
+
+2. **Configurar credenciales:** Abre el proyecto en tu editor de código. Busca el archivo .env y reemplaza los valores de conexión con las credenciales de tu proyecto de Supabase:
+
+```
+SUPABASE_URL= XXXXX
+SUPABASE_KEY= XXXXX
+```
+
+3. **Restaurar dependencias y ejecutar:** En la terminal, ejecuta los siguientes comandos para descargar los paquetes NuGet necesarios y levantar el servidor:
+
+```
+dotnet restore
+dotnet build
+dotnet run
+```
+
+4. La API se iniciará y la consola te indicará en qué puerto está escuchando `(usualmente http://localhost:5000 o https://localhost:5001)`. *Deja esta terminal abierta.*
+
+**Paso 4: Configurar y Levantar el Frontend**
+La interfaz de usuario está construida en Vanilla JS y se comunica directamente con la API que acabas de encender.
+
+1. Abre una nueva terminal y navega hacia la carpeta del frontend:
+
+```
+cd Frontend
+```
+
+2. **Conectar el Frontend a la API:** Abre el archivo de configuración de llamadas HTTP (ubicado en Frontend/src/core/api.js). Verifica que la constante de la URL base apunte al puerto local donde se está ejecutando tu API en .NET:
+
+```
+const API_BASE_URL = 'https://localhost:5001/api'; // Ajusta el puerto si es necesario
+```
+
+3. **Ejecutar la interfaz:** Dado que es un proyecto HTML/JS puro, no necesitas compilar nada. Simplemente levanta un servidor estático.
+
+  - Si usas VS Code, haz clic derecho sobre el archivo index.html y selecciona "Open with Live Server".
+
+4. Abre tu navegador web en la dirección que te indique el servidor `(ej. http://127.0.0.1:5500)` y ya podrás interactuar con el Sistema de Gestión Hotelera.
