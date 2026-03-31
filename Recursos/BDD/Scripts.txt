@@ -1,0 +1,158 @@
+SCRIPTS BASE DE DATOS - SUPABASE
+TABLAS
+CREATE TABLE TipoHabitacion (
+    tipo_habitacion_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    nombre VARCHAR(100) NOT NULL,
+    descripcion TEXT,
+    capacidad INT NOT NULL,
+    precio_base DECIMAL(10, 2) NOT NULL,
+    amenidades TEXT[] 
+);
+
+CREATE TABLE Habitacion (
+    habitacion_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    numero_habitacion VARCHAR(20) NOT NULL UNIQUE,
+    piso INT NOT NULL,
+    tipo_habitacion_id UUID NOT NULL REFERENCES TipoHabitacion(tipo_habitacion_id),
+    estado VARCHAR(50) DEFAULT 'Disponible' CHECK (estado IN ('Disponible', 'Ocupada'))
+);
+
+CREATE TABLE Huesped (
+    huesped_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    nombre VARCHAR(100) NOT NULL,
+    apellido VARCHAR(100) NOT NULL,
+    tipo_documento VARCHAR(20) NOT NULL,
+    documento_identidad VARCHAR(50) NOT NULL UNIQUE,
+    telefono VARCHAR(50),
+    correo VARCHAR(100),
+    direccion TEXT,
+    nacionalidad VARCHAR(50),
+    fecha_registro DATE DEFAULT CURRENT_DATE
+);
+
+CREATE TABLE PoliticaCancelacion (
+    politica_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    dias_limite_sin_mora INT NOT NULL,
+    porcentaje_penalidad DECIMAL(3, 2) NOT NULL, 
+    descripcion TEXT,
+    activa BOOLEAN DEFAULT TRUE
+);
+
+CREATE TABLE Estadia (
+    estadia_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    huesped_titular_id UUID NOT NULL REFERENCES Huesped(huesped_id),
+    habitacion_id UUID NOT NULL REFERENCES Habitacion(habitacion_id),
+    fecha_ingreso DATE NOT NULL,
+    fecha_salida DATE NOT NULL,
+    cantidad_personas INT NOT NULL,
+    precio_aplicado DECIMAL(10, 2) NOT NULL,
+    estado VARCHAR(50) DEFAULT 'Reservada' CHECK (estado IN ('Reservada', 'En curso', 'Finalizada', 'Cancelada')),
+    observaciones TEXT,
+    fecha_hora_checkin TIMESTAMP,
+    fecha_hora_checkout TIMESTAMP,
+    mora DECIMAL(10, 2) DEFAULT 0.00,
+    fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE EstadiaHuesped (
+    estadia_acompañante_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    estadia_id UUID NOT NULL REFERENCES Estadia(estadia_id) ON DELETE CASCADE,
+    huesped_id UUID NOT NULL REFERENCES Huesped(huesped_id) ON DELETE CASCADE
+);
+
+CREATE TABLE AreaServicio (
+    area_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    nombre_area VARCHAR(100) NOT NULL, 
+    descripcion TEXT,
+    horario_atencion VARCHAR(100),
+    ubicacion VARCHAR(150)
+);
+
+CREATE TABLE Empleado (
+    empleado_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    nombre_empleado VARCHAR(100) NOT NULL,
+    cargo VARCHAR(100) NOT NULL, 
+    telefono VARCHAR(50),
+    email VARCHAR(100)
+);
+
+CREATE TABLE AsignacionArea (
+    asignacion_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    area_id UUID NOT NULL REFERENCES AreaServicio(area_id) ON DELETE CASCADE,
+    empleado_id UUID NOT NULL REFERENCES Empleado(empleado_id) ON DELETE CASCADE,
+    es_encargado BOOLEAN DEFAULT false, 
+    UNIQUE(area_id, empleado_id) 
+);
+
+POBLACION DE TABLAS
+INSERT INTO TipoHabitacion (nombre, descripcion, capacidad, precio_base, amenidades) VALUES
+('Simple', 'Habitación individual con una cama simple, ideal para viajeros solos', 1, 80.00, ARRAY['WiFi', 'TV', 'Aire acondicionado']),
+('Doble con camas individuales', 'Habitación con dos camas individuales, perfecta para amigos o colegas', 2, 120.00, ARRAY['WiFi', 'TV', 'Aire acondicionado', 'Escritorio']),
+('Doble matrimonial', 'Habitación con cama matrimonial, ideal para parejas', 2, 130.00, ARRAY['WiFi', 'TV', 'Aire acondicionado', 'Minibar']),
+('Suite', 'Amplia suite con sala de estar separada y amenidades premium', 3, 200.00, ARRAY['WiFi', 'TV', 'Aire acondicionado', 'Minibar', 'Jacuzzi', 'Sala de estar']);
+
+INSERT INTO Habitacion (numero_habitacion, piso, tipo_habitacion_id, estado) VALUES
+('Hab. 101', 1, (SELECT tipo_habitacion_id FROM TipoHabitacion WHERE nombre = 'Simple'), 'Limpieza'),
+('Hab. 102', 1, (SELECT tipo_habitacion_id FROM TipoHabitacion WHERE nombre = 'Doble matrimonial'), 'Ocupada'),
+('Hab. 103', 1, (SELECT tipo_habitacion_id FROM TipoHabitacion WHERE nombre = 'Simple'), 'Disponible'),
+('Hab. 104', 1, (SELECT tipo_habitacion_id FROM TipoHabitacion WHERE nombre = 'Doble con camas individuales'), 'Disponible'),
+('Hab. 201', 2, (SELECT tipo_habitacion_id FROM TipoHabitacion WHERE nombre = 'Simple'), 'Disponible'),
+('Hab. 202', 2, (SELECT tipo_habitacion_id FROM TipoHabitacion WHERE nombre = 'Suite'), 'Mantenimiento'),
+('Hab. 203', 2, (SELECT tipo_habitacion_id FROM TipoHabitacion WHERE nombre = 'Doble con camas individuales'), 'Disponible'),
+('Hab. 204', 2, (SELECT tipo_habitacion_id FROM TipoHabitacion WHERE nombre = 'Suite'), 'Disponible'),
+('Hab. 301', 3, (SELECT tipo_habitacion_id FROM TipoHabitacion WHERE nombre = 'Doble matrimonial'), 'Disponible'),
+('Hab. 302', 3, (SELECT tipo_habitacion_id FROM TipoHabitacion WHERE nombre = 'Doble matrimonial'), 'Ocupada'),
+('Hab. 303', 3, (SELECT tipo_habitacion_id FROM TipoHabitacion WHERE nombre = 'Simple'), 'Disponible'),
+('Hab. 304', 3, (SELECT tipo_habitacion_id FROM TipoHabitacion WHERE nombre = 'Doble con camas individuales'), 'Disponible');
+
+-- 3. Huéspedes
+INSERT INTO Huesped (nombre, apellido, tipo_documento, documento_identidad, telefono, correo, direccion, nacionalidad, fecha_registro) VALUES
+('Juan', 'Pérez', 'DNI', '12345678', '+54 11 2345-6789', 'juan.perez@gmail.com', 'Av. Corrientes 1234, CABA', 'Argentina', '2024-07-31'),
+('Maria', 'Garcia', 'Pasaporte', '87654321', '+54 11 9876-5432', 'maria.garcia@gmail.com', 'Calle Falsa 456, CABA', 'Colombia', '2024-08-05'),
+('Carlos', 'Méndez', 'DNI', '45678912', '+54 11 4567-8912', 'carlos.mendez@gmail.com', 'San Martín 789, CABA', 'Argentina', '2024-08-14');
+
+INSERT INTO PoliticaCancelacion (dias_limite_sin_mora, porcentaje_penalidad, descripcion, activa) 
+VALUES (7, 0.15, 'Penalidad del 15% sobre el precio total si se cancela con 7 días o menos de anticipación al check-in.', true);
+
+INSERT INTO Estadia (huesped_titular_id, habitacion_id, fecha_ingreso, fecha_salida, cantidad_personas, precio_aplicado, estado, fecha_hora_checkin) VALUES
+(
+    (SELECT huesped_id FROM Huesped WHERE documento_identidad = '12345678'), 
+    (SELECT habitacion_id FROM Habitacion WHERE numero_habitacion = 'Hab. 102'),
+    '2026-03-27', '2026-03-30', 2, 390.00, 'En curso', '2026-03-26 14:36:00'
+),
+(
+    (SELECT huesped_id FROM Huesped WHERE documento_identidad = '87654321'),
+    (SELECT habitacion_id FROM Habitacion WHERE numero_habitacion = 'Hab. 302'),
+    '2026-03-28', '2026-04-01', 2, 520.00, 'Reservada', null
+);
+
+-- 6. Áreas de Servicio
+INSERT INTO AreaServicio (nombre_area, descripcion, horario_atencion, ubicacion) VALUES
+('Recepción Principal', 'Atención al huésped, check-in/check-out, información general', '24 horas', 'Planta Baja - Lobby'),
+('Servicio de Limpieza', 'Limpieza de habitaciones, áreas comunes y servicios especiales', '8:00 - 20:00', 'Piso -1 - Área de servicio'),
+('Mantenimiento', 'Reparaciones, mantenimiento preventivo y emergencias técnicas', '7:00 - 19:00', 'Piso -1 - Taller'),
+('Restaurante', 'Servicio de desayuno, almuerzo, cena y room service', '7:00 - 23:00', 'Planta Baja - Ala Este'),
+('Seguridad', 'Seguridad del recinto 24/7', '24 horas', 'Planta Baja - Área de seguridad'),
+('Conserjería', 'Reservas de excursiones, taxis, información turística', '8:00 - 22:00', 'Planta Baja - Lobby');
+
+INSERT INTO Empleado (nombre_empleado, cargo, telefono, email) VALUES
+('Ana Rodríguez', 'Jefa de Recepción', '+54 11 4000-1000', 'recepcion@hotel.com'),
+('Carlos López', 'Jefe de Limpieza', '+54 11 4000-1001', 'limpieza@hotel.com'),
+('Luis Fernández', 'Jefe de Mantenimiento', '+54 11 4000-1002', 'mantenimiento@hotel.com'),
+('María González', 'Maitre', '+54 11 4000-1003', 'restaurante@hotel.com'),
+('Pedro Martínez', 'Jefe de Seguridad', '+54 11 4000-1004', 'seguridad@hotel.com'),
+('Laura Díaz', 'Conserje Principal', '+54 11 4000-1005', 'conserjeria@hotel.com'),
+('Roberto Gómez', 'Recepcionista Turno Noche', '+54 11 4000-2001', 'rgomez@hotel.com'), -- Empleado regular
+('Elena Suárez', 'Mucama', '+54 11 4000-2002', 'esuarez@hotel.com'); -- Empleada regular
+
+INSERT INTO AsignacionArea (area_id, empleado_id, es_encargado) VALUES
+((SELECT area_id FROM AreaServicio WHERE nombre_area = 'Recepción Principal'), (SELECT empleado_id FROM Empleado WHERE nombre_empleado = 'Ana Rodríguez'), true),
+((SELECT area_id FROM AreaServicio WHERE nombre_area = 'Servicio de Limpieza'), (SELECT empleado_id FROM Empleado WHERE nombre_empleado = 'Carlos López'), true),
+((SELECT area_id FROM AreaServicio WHERE nombre_area = 'Mantenimiento'), (SELECT empleado_id FROM Empleado WHERE nombre_empleado = 'Luis Fernández'), true),
+((SELECT area_id FROM AreaServicio WHERE nombre_area = 'Restaurante'), (SELECT empleado_id FROM Empleado WHERE nombre_empleado = 'María González'), true),
+((SELECT area_id FROM AreaServicio WHERE nombre_area = 'Seguridad'), (SELECT empleado_id FROM Empleado WHERE nombre_empleado = 'Pedro Martínez'), true),
+((SELECT area_id FROM AreaServicio WHERE nombre_area = 'Conserjería'), (SELECT empleado_id FROM Empleado WHERE nombre_empleado = 'Laura Díaz'), true),
+((SELECT area_id FROM AreaServicio WHERE nombre_area = 'Recepción Principal'), (SELECT empleado_id FROM Empleado WHERE nombre_empleado = 'Roberto Gómez'), false),
+((SELECT area_id FROM AreaServicio WHERE nombre_area = 'Servicio de Limpieza'), (SELECT empleado_id FROM Empleado WHERE nombre_empleado = 'Elena Suárez'), false);
+
+POLITICAS
