@@ -50,7 +50,7 @@ namespace HotelReservaAPI.Services
 
             estadia.Estado = "Reservada";
             estadia.PrecioAplicado = tipoHabitacion.PrecioBase;
-            estadia.FechaCreacion = DateTime.UtcNow;
+            estadia.FechaCreacion = DateTime.Now;
             estadia.Mora = 0;
 
             return _estadiaRepository.Insertar(estadia);
@@ -78,7 +78,7 @@ namespace HotelReservaAPI.Services
             if (reserva.Estado != "Reservada") throw new Exception("Estado inválido para registrar check-in.");
 
             reserva.Estado = "En curso";
-            reserva.FechaHoraCheckin = DateTime.UtcNow;
+            reserva.FechaHoraCheckin = DateTime.Now;
             _estadiaRepository.Actualizar(reserva);
 
             if (acompanantesIds != null && acompanantesIds.Any())
@@ -114,7 +114,7 @@ namespace HotelReservaAPI.Services
             if (reserva.Estado != "En curso") throw new Exception("Solo se puede hacer check-out de una reserva 'En curso'.");
 
             reserva.Estado = "Finalizada";
-            reserva.FechaHoraCheckout = DateTime.UtcNow;
+            reserva.FechaHoraCheckout = DateTime.Now;
             _estadiaRepository.Actualizar(reserva);
 
             var habitacion = _habitacionRepository.ObtenerHabitacionPorId(reserva.HabitacionId);
@@ -134,7 +134,7 @@ namespace HotelReservaAPI.Services
             if (reserva.Estado != "Reservada") throw new Exception("Solo se pueden cancelar reservas en estado 'Reservada'.");
 
             var politica = _politicaRepository.ObtenerPoliticaActiva();
-            var diasAnticipacion = (reserva.FechaIngreso.Date - DateTime.UtcNow.Date).TotalDays;
+            var diasAnticipacion = (reserva.FechaIngreso.Date - DateTime.Now.Date).TotalDays;
 
             if (politica != null && diasAnticipacion <= politica.DiasLimiteSinMora && diasAnticipacion >= 0)
             {

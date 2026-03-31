@@ -82,7 +82,7 @@ namespace HotelReservaAPI.Controllers
                     CantidadPersonas = estadiaDTO.CantidadPersonas,
                     Observaciones = estadiaDTO.Observaciones,
                     Estado = "Reservada",
-                    FechaCreacion = DateTime.UtcNow,
+                    FechaCreacion = DateTime.Now,
                     PrecioAplicado = 0,
                     Mora = 0
                 };

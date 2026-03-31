@@ -4,7 +4,6 @@
     <header class="reservas__header">
         <div class="reservas__header-text">
             <h2 class="reservas__title">Gestión de Estadías y Reservas</h2>
-            <p class="reservas__subtitle">Administra el ciclo completo: Reserva → Check-in → Estadía → Check-Out</p>
         </div>
     </header>
 
@@ -15,7 +14,7 @@
                 <span class="summary-card__icon summary-card__icon--blue">📅</span>
             </div>
             <span class="summary-card__number summary-card__number--blue" id="count-activas">0</span>
-            <span class="summary-card__label">vigentes</span>
+            <span class="summary-card__label">Vigentes</span>
         </div>
         <div class="summary-card">
             <div class="summary-card__top">
@@ -23,7 +22,7 @@
                 <span class="summary-card__icon summary-card__icon--purple">🛏️</span>
             </div>
             <span class="summary-card__number summary-card__number--purple" id="count-reservadas">0</span>
-            <span class="summary-card__label">pendientes check-in</span>
+            <span class="summary-card__label">Pendientes check-in</span>
         </div>
         <div class="summary-card">
             <div class="summary-card__top">
@@ -31,7 +30,7 @@
                 <span class="summary-card__icon summary-card__icon--green">→]</span>
             </div>
             <span class="summary-card__number summary-card__number--green" id="count-encurso">0</span>
-            <span class="summary-card__label">en estadía</span>
+            <span class="summary-card__label">En estadía</span>
         </div>
         <div class="summary-card">
             <div class="summary-card__top">
@@ -39,7 +38,7 @@
                 <span class="summary-card__icon summary-card__icon--red">⊗</span>
             </div>
             <span class="summary-card__number summary-card__number--red" id="count-canceladas">0</span>
-            <span class="summary-card__label">anuladas</span>
+            <span class="summary-card__label">Anuladas</span>
         </div>
     </section>
 
@@ -93,7 +92,7 @@
                 <p class="modal__helper-text">Registra el huésped titular, habitación y fechas. Los acompañantes se registran en el check-in.</p>
                 
                 <div class="form-group form-group--full">
-                    <label class="form-label">Huésped Titular * <span style="font-weight: normal; color: #80868b;">(buscar por documento_identidad)</span></label>
+                    <label class="form-label">Huésped Titular * <span style="font-weight: normal; color: #80868b;"></span></label>
                     <select class="form-input form-input--light" id="res-huesped" required></select>
                 </div>
                 
@@ -201,6 +200,31 @@
         </div>
     </div>
 
+    <div class="modal" id="modal-checkout">
+        <div class="modal__overlay" data-close="modal-checkout"></div>
+        <div class="modal__content">
+            <header class="modal__header">
+                <h3 class="modal__title">Confirmar Check-Out</h3>
+                <button class="btn-reset modal__close" data-close="modal-checkout">×</button>
+            </header>
+            <div class="modal__body">
+                <div class="info-box bg-light">
+                    <p style="color: var(--color-text-main); font-size: 0.95rem;">
+                        ¿Estás seguro de que deseas realizar el check-out para el huésped <strong id="chkout-titular"></strong>?
+                    </p>
+                    <p class="text-muted mt-16" style="font-size: 0.875rem; border-top: 1px solid var(--color-border); padding-top: 12px;">
+                        Al confirmar, la reserva pasará a estado <strong>Finalizada</strong> y la <strong id="chkout-hab"></strong> volverá a estar <strong>Disponible</strong> para futuras reservas.
+                    </p>
+                </div>
+            </div>
+            <div id="msg-checkout" class="modal__message"></div>
+            <footer class="modal__footer">
+                <button class="btn-secundario btn-secundario--outline" data-close="modal-checkout">Volver</button>
+                <button class="btn-primario" id="btn-confirmar-checkout">Confirmar Check-Out</button>
+            </footer>
+        </div>
+    </div>
+
     <div class="modal" id="modal-cancelar">
         <div class="modal__overlay" data-close="modal-cancelar"></div>
         <div class="modal__content">
@@ -208,9 +232,7 @@
                 <h3 class="modal__title">Cancelar Estadía/Reserva</h3>
                 <button class="btn-reset modal__close" data-close="modal-cancelar">×</button>
             </header>
-            <div class="modal__body">
-                <p class="modal__helper-text">Se calculará la mora correspondiente según la cercanía con la fecha de ingreso.</p>
-                
+            <div class="modal__body">                
                 <div class="resumen-box resumen-box--disabled mt-16">
                     <div class="resumen-box__row">
                         <span class="resumen-box__label">Huésped:</span>
@@ -261,6 +283,85 @@
             <footer class="modal__footer">
                 <button class="btn-secundario btn-secundario--outline" data-close="modal-cancelar">Volver</button>
                 <button class="btn-danger" id="btn-confirmar-cancelar">Confirmar Cancelación</button>
+            </footer>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-detalle">
+        <div class="modal__overlay" data-close="modal-detalle"></div>
+        <div class="modal__content" style="max-width: 800px;"> <header class="modal__header">
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <h3 class="modal__title">Detalles de la Estadía</h3>
+                    <span id="det-badge-estado" class="badge-estado"></span>
+                </div>
+                <button class="btn-reset modal__close" data-close="modal-detalle">×</button>
+            </header>
+            <div class="modal__body" style="background-color: #f8f9fa;">
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div style="display: flex; flex-direction: column; gap: 16px;">
+                        
+                        <div class="info-box" style="background: white;">
+                            <h4 style="font-size: 0.875rem; color: var(--color-text-muted); margin-bottom: 12px; border-bottom: 1px solid var(--color-border); padding-bottom: 8px;">👥 Información de Huéspedes</h4>
+                            <div class="resumen-box__row">
+                                <span class="resumen-box__label">Titular:</span>
+                                <span class="resumen-box__value" id="det-titular"></span>
+                            </div>
+                            <div class="resumen-box__row">
+                                <span class="resumen-box__label">Documento:</span>
+                                <span class="resumen-box__value" id="det-doc"></span>
+                            </div>
+                            <div class="mt-16" id="det-contenedor-acompanantes">
+                                <span class="resumen-box__label" style="display: block; margin-bottom: 4px;">Acompañantes registrados:</span>
+                                <div id="det-acompanantes" class="text-muted" style="font-size: 0.875rem; padding-left: 8px; border-left: 2px solid var(--color-border);"></div>
+                            </div>
+                        </div>
+
+                        <div class="info-box" style="background: white;">
+                            <h4 style="font-size: 0.875rem; color: var(--color-text-muted); margin-bottom: 12px; border-bottom: 1px solid var(--color-border); padding-bottom: 8px;">⏱️ Tiempos y Registros</h4>
+                            <div class="resumen-box__row"><span class="resumen-box__label">Creada el:</span><span class="resumen-box__value" id="det-creacion"></span></div>
+                            <div class="resumen-box__row"><span class="resumen-box__label">Ingreso previsto:</span><span class="resumen-box__value" id="det-ingreso"></span></div>
+                            <div class="resumen-box__row"><span class="resumen-box__label">Salida prevista:</span><span class="resumen-box__value" id="det-salida"></span></div>
+                            <div class="resumen-box__row mt-16"><span class="resumen-box__label">Check-in real:</span><span class="resumen-box__value" id="det-checkin"></span></div>
+                            <div class="resumen-box__row"><span class="resumen-box__label">Check-out real:</span><span class="resumen-box__value" id="det-checkout"></span></div>
+                        </div>
+
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; gap: 16px;">
+                        
+                        <div class="info-box" style="background: white; border-color: var(--color-primary);">
+                            <h4 style="font-size: 0.875rem; color: var(--color-primary); margin-bottom: 12px; border-bottom: 1px solid #e8f0fe; padding-bottom: 8px;">🛏️ Características de la Habitación</h4>
+                            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                                <strong style="font-size: 1.125rem;" id="det-hab"></strong>
+                                <span class="badge-estado" style="background: #e8f0fe; color: var(--color-primary);" id="det-tipo-nombre"></span>
+                            </div>
+                            <p class="text-muted mt-16" style="font-size: 0.8125rem; line-height: 1.4;" id="det-tipo-desc"></p>
+                            
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px;">
+                                <div class="bg-light" style="padding: 8px; border-radius: 4px; font-size: 0.8125rem;"><span class="text-muted">Capacidad:</span> <strong id="det-capacidad"></strong></div>
+                                <div class="bg-light" style="padding: 8px; border-radius: 4px; font-size: 0.8125rem;"><span class="text-muted">Precio Base:</span> <strong id="det-precio-base"></strong></div>
+                            </div>
+                        </div>
+
+                        <div class="info-box" style="background: white;">
+                            <h4 style="font-size: 0.875rem; color: var(--color-text-muted); margin-bottom: 12px; border-bottom: 1px solid var(--color-border); padding-bottom: 8px;">💳 Resumen Financiero</h4>
+                            <div class="resumen-box__row"><span class="resumen-box__label">Estadía (<span id="det-noches"></span> noches):</span><span class="resumen-box__value" id="det-subtotal"></span></div>
+                            <div class="resumen-box__row" id="row-mora" style="display: none; color: var(--color-danger);"><span class="resumen-box__label" style="color: inherit;">Mora por cancelación:</span><span class="resumen-box__value" id="det-mora" style="color: inherit;"></span></div>
+                            <div class="resumen-box__row resumen-box__row--total mt-16"><span class="resumen-box__label" style="font-weight: 700;">Total Aplicado:</span><span class="resumen-box__value" id="det-total-final" style="font-size: 1.125rem; font-weight: 700;"></span></div>
+                        </div>
+
+                        <div class="info-box" style="background: white;" id="box-observaciones">
+                            <h4 style="font-size: 0.875rem; color: var(--color-text-muted); margin-bottom: 8px;">📝 Observaciones</h4>
+                            <p style="font-size: 0.875rem; color: var(--color-text-main); font-style: italic;" id="det-obs"></p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <footer class="modal__footer">
+                <button class="btn-secundario" data-close="modal-detalle">Cerrar Detalle</button>
             </footer>
         </div>
     </div>

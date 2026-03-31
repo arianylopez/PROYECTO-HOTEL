@@ -121,6 +121,12 @@ export async function initReservas() {
         lista.forEach(res => {
             const tr = document.createElement('tr');
             
+            tr.className = 'tr-clickable';
+            tr.addEventListener('click', (e) => {
+                if (e.target.closest('button')) return; 
+                abrirDetalleReserva(res);
+            });
+            
             const huesped = huespedes.find(h => h.huespedId === res.huespedTitularId);
             const hab = habitaciones.find(h => h.habitacionId === res.habitacionId);
             const tipo = tiposHabitacion.find(t => t.tipoHabitacionId === hab?.tipoHabitacionId);
@@ -136,8 +142,14 @@ export async function initReservas() {
             const estadoStr = res.estado || 'Desconocido';
             const estadoClean = estadoStr.replace(/\s+/g, '').toLowerCase(); 
 
+            const formatearHoraCheckin = (fechaCsharp) => {
+                if (!fechaCsharp) return '';
+                const fechaUTC = fechaCsharp.endsWith('Z') ? fechaCsharp : fechaCsharp + 'Z';
+                return new Date(fechaUTC).toLocaleString(); 
+            };
+
             const checkinTime = (estadoClean === 'encurso' && res.fechaHoraCheckin) 
-                ? `<span class="checkin-label">Check-in: ${new Date(res.fechaHoraCheckin).toLocaleString()}</span>` 
+                ? `<span class="checkin-label">Check-in: ${formatearHoraCheckin(res.fechaHoraCheckin)}</span>` 
                 : '';
 
             const dias = Math.ceil((new Date(res.fechaSalida) - new Date(res.fechaIngreso)) / (1000 * 60 * 60 * 24));
@@ -231,7 +243,7 @@ export async function initReservas() {
                 const btnCheckout = document.createElement('button');
                 btnCheckout.className = 'btn-outline';
                 btnCheckout.innerHTML = '[→ Check-out';
-                btnCheckout.onclick = () => ejecutarCheckOut(res.estadiaId);
+                btnCheckout.onclick = () => prepararCheckOut(res);
                 tdAcc.appendChild(btnCheckout);
             }
 
@@ -447,16 +459,30 @@ export async function initReservas() {
         }
     });
 
-    const ejecutarCheckOut = async (id) => {
-        if(confirm('¿Confirmas el Check-out? La habitación pasará a estado Disponible.')) {
-            try {
-                await ReservaService.registrarCheckOut(id);
-                await cargarDatosInit();
-            } catch (error) {
-                alert('Error al realizar check-out.');
-            }
-        }
+    const prepararCheckOut = (reserva) => {
+        reservaSeleccionada = reserva; 
+        const huesped = huespedes.find(h => h.huespedId === reserva.huespedTitularId);
+        const hab = habitaciones.find(h => h.habitacionId === reserva.habitacionId);
+
+        const numHabLimpio = hab ? String(hab.numeroHabitacion).replace(/Hab\.?\s*/i, '').trim() : 'N/A';
+        document.getElementById('chkout-titular').textContent = huesped ? `${huesped.nombre} ${huesped.apellido}` : 'Desconocido';
+        document.getElementById('chkout-hab').textContent = `Hab. ${numHabLimpio}`;
+        
+        document.getElementById('msg-checkout').textContent = '';
+
+        abrirModal('modal-checkout');
     };
+
+    document.getElementById('btn-confirmar-checkout')?.addEventListener('click', async () => {
+        try {
+            await ReservaService.registrarCheckOut(reservaSeleccionada.estadiaId);
+            cerrarModales();
+            await cargarDatosInit();
+        } catch (error) {
+            document.getElementById('msg-checkout').textContent = 'Error al realizar el check-out.';
+            document.getElementById('msg-checkout').className = 'modal__message modal__message--error';
+        }
+    });
 
     const prepararCancelar = (reserva) => {
         reservaSeleccionada = reserva;
@@ -464,14 +490,16 @@ export async function initReservas() {
         const hab = habitaciones.find(h => h.habitacionId === reserva.habitacionId);
         const tipo = tiposHabitacion.find(t => t.tipoHabitacionId === hab?.tipoHabitacionId);
         
+        const numHabLimpio = hab ? String(hab.numeroHabitacion).replace(/Hab\.?\s*/i, '').trim() : 'N/A';
         document.getElementById('cnc-titular').textContent = huesped ? `${huesped.nombre} ${huesped.apellido}` : 'N/A';
-        document.getElementById('cnc-hab').textContent = hab ? `Hab. ${hab.numeroHabitacion}` : 'N/A';
+        document.getElementById('cnc-hab').textContent = `Hab. ${numHabLimpio}`;
         document.getElementById('cnc-fecha').textContent = new Date(reserva.fechaIngreso).toLocaleDateString();
 
         const diasEstadia = Math.ceil((new Date(reserva.fechaSalida) - new Date(reserva.fechaIngreso)) / (1000 * 60 * 60 * 24));
         const precioTotal = (tipo ? tipo.precioBase : 0) * (diasEstadia > 0 ? diasEstadia : 1);
         document.getElementById('cnc-total').textContent = `$${precioTotal.toFixed(2)}`;
 
+        const diasAnticipacion = Math.ceil((new Date(reserva.fechaIngreso) - new Date()) / (1000 * 60 * 60 * 24));
         const alertaMora = document.getElementById('alerta-mora');
 
         if (diasAnticipacion <= 7) {
@@ -481,11 +509,79 @@ export async function initReservas() {
         } else {
             alertaMora.style.display = 'none';
         }
+
         document.getElementById('cnc-motivo').value = '';
         document.getElementById('cnc-obs').value = '';
         document.getElementById('msg-cancelar').textContent = '';
 
         abrirModal('modal-cancelar');
+    };
+
+    const abrirDetalleReserva = (reserva) => {
+        const huesped = huespedes.find(h => h.huespedId === reserva.huespedTitularId);
+        const hab = habitaciones.find(h => h.habitacionId === reserva.habitacionId);
+        const tipo = tiposHabitacion.find(t => t.tipoHabitacionId === hab?.tipoHabitacionId);
+
+        const estadoClean = (reserva.estado || '').replace(/\s+/g, '').toLowerCase();
+        const badge = document.getElementById('det-badge-estado');
+        badge.textContent = reserva.estado;
+        badge.className = `badge-estado badge-estado--${estadoClean}`;
+
+        document.getElementById('det-titular').textContent = huesped ? `${huesped.nombre} ${huesped.apellido}` : 'Desconocido';
+        document.getElementById('det-doc').textContent = huesped ? `${huesped.tipoDocumento}: ${huesped.documentoIdentidad}` : 'N/A';
+
+        const contAcomp = document.getElementById('det-acompanantes');
+        if (reserva.acompanantesIds && reserva.acompanantesIds.length > 0) {
+            const nombres = reserva.acompanantesIds.map(id => {
+                const h = huespedes.find(hue => hue.huespedId === id);
+                return h ? `• ${h.nombre} ${h.apellido} (${h.documentoIdentidad})` : '• Desconocido';
+            });
+            contAcomp.innerHTML = nombres.join('<br>');
+        } else {
+            contAcomp.innerHTML = `<em>Sin acompañantes registrados (Reserva para ${reserva.cantidadPersonas} persona/s)</em>`;
+        }
+
+        const formatFecha = (f) => f ? new Date(f.endsWith('Z') ? f : f+'Z').toLocaleString() : 'Pendiente';
+        const formatSoloFecha = (f) => f ? new Date(f).toLocaleDateString() : 'N/A';
+        
+        document.getElementById('det-creacion').textContent = formatFecha(reserva.fechaCreacion);
+        document.getElementById('det-ingreso').textContent = formatSoloFecha(reserva.fechaIngreso);
+        document.getElementById('det-salida').textContent = formatSoloFecha(reserva.fechaSalida);
+        document.getElementById('det-checkin').textContent = formatFecha(reserva.fechaHoraCheckin);
+        document.getElementById('det-checkout').textContent = formatFecha(reserva.fechaHoraCheckout);
+
+        document.getElementById('det-hab').textContent = hab ? `Habitación ${hab.numeroHabitacion}` : 'N/A';
+        document.getElementById('det-tipo-nombre').textContent = tipo ? tipo.nombre : 'Desconocido';
+        document.getElementById('det-tipo-desc').textContent = tipo ? tipo.descripcion : 'Sin descripción de la variación.';
+        document.getElementById('det-capacidad').textContent = tipo ? `${tipo.capacidad} persona(s)` : 'N/A';
+        document.getElementById('det-precio-base').textContent = tipo ? `$${tipo.precioBase}/noche` : 'N/A';
+
+        const diasEstadia = Math.ceil((new Date(reserva.fechaSalida) - new Date(reserva.fechaIngreso)) / (1000 * 60 * 60 * 24));
+        const noches = diasEstadia > 0 ? diasEstadia : 1;
+        const subtotal = (reserva.precioAplicado || (tipo ? tipo.precioBase : 0)) * noches;
+        
+        document.getElementById('det-noches').textContent = noches;
+        document.getElementById('det-subtotal').textContent = `$${subtotal.toFixed(2)}`;
+        
+        const moraInfo = document.getElementById('row-mora');
+        if (reserva.mora && reserva.mora > 0) {
+            moraInfo.style.display = 'flex';
+            document.getElementById('det-mora').textContent = `+$${reserva.mora.toFixed(2)}`;
+            document.getElementById('det-total-final').textContent = `$${(subtotal + reserva.mora).toFixed(2)}`;
+        } else {
+            moraInfo.style.display = 'none';
+            document.getElementById('det-total-final').textContent = `$${subtotal.toFixed(2)}`;
+        }
+
+        const obsBox = document.getElementById('box-observaciones');
+        if (reserva.observaciones && reserva.observaciones.trim() !== '') {
+            obsBox.style.display = 'block';
+            document.getElementById('det-obs').textContent = reserva.observaciones;
+        } else {
+            obsBox.style.display = 'none';
+        }
+
+        abrirModal('modal-detalle');
     };
 
     document.getElementById('btn-confirmar-cancelar')?.addEventListener('click', async () => {
