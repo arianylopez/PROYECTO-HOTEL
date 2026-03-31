@@ -1,5 +1,5 @@
 import { ReservaService } from './ReservaService.js';
-import { HabitacionUIFactory } from '../../patterns/TipoHabitacionStrategy.js';
+import { TipoHabitacionContext } from '../../patterns/TipoHabitacionStrategy.js';
 
 export async function initReservas() {
     let reservas = [];
@@ -552,7 +552,14 @@ export async function initReservas() {
 
         document.getElementById('det-hab').textContent = hab ? `Habitación ${hab.numeroHabitacion}` : 'N/A';
         document.getElementById('det-tipo-nombre').textContent = tipo ? tipo.nombre : 'Desconocido';
-        document.getElementById('det-tipo-desc').textContent = tipo ? tipo.descripcion : 'Sin descripción de la variación.';
+
+        if (tipo) {
+            const contextoStrategy = new TipoHabitacionContext(tipo.nombre);
+            document.getElementById('det-tipo-desc').textContent = contextoStrategy.ejecutarEstrategiaResumen(tipo);
+        } else {
+            document.getElementById('det-tipo-desc').textContent = 'Sin descripción de la variación.';
+        }
+        
         document.getElementById('det-capacidad').textContent = tipo ? `${tipo.capacidad} persona(s)` : 'N/A';
         document.getElementById('det-precio-base').textContent = tipo ? `$${tipo.precioBase}/noche` : 'N/A';
 
