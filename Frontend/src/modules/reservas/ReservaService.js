@@ -10,5 +10,6 @@ export const ReservaService = {
     
     obtenerHuespedes: async () => await api.get('/huesped'),
     obtenerHabitaciones: async () => await api.get('/habitacion'),
-    obtenerTiposHabitacion: async () => await api.get('/habitacion/tipos')
+    obtenerTiposHabitacion: async () => await api.get('/habitacion/tipos'),
+    obtenerPoliticaCancelacion: async () => await api.get('/politicacancelacion').catch(() => null)
 };

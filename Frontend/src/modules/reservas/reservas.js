@@ -48,13 +48,13 @@ export async function initReservas() {
             tbody.innerHTML = '<tr><td colspan="7">Cargando datos...</td></tr>';
             
             const [resData, hueData, habData, tiposData] = await Promise.all([
-                ReservaService.obtenerTodas().catch(() => []), // <--- AHORA TRAE TODAS
+                ReservaService.obtenerTodas().catch(() => []), 
                 ReservaService.obtenerHuespedes().catch(() => []),
                 ReservaService.obtenerHabitaciones().catch(() => []),
                 ReservaService.obtenerTiposHabitacion().catch(() => [])
             ]);
             
-            reservas = resData.sort((a, b) => new Date(b.fechaIngreso) - new Date(a.fechaIngreso)); // Ordenadas descendente (más nuevas primero)
+            reservas = resData.sort((a, b) => new Date(b.fechaIngreso) - new Date(a.fechaIngreso));
             huespedes = hueData;
             habitaciones = habData;
             tiposHabitacion = tiposData;
@@ -484,7 +484,7 @@ export async function initReservas() {
         }
     });
 
-    const prepararCancelar = (reserva) => {
+    const prepararCancelar = async (reserva) => {
         reservaSeleccionada = reserva;
         const huesped = huespedes.find(h => h.huespedId === reserva.huespedTitularId);
         const hab = habitaciones.find(h => h.habitacionId === reserva.habitacionId);
@@ -502,9 +502,14 @@ export async function initReservas() {
         const diasAnticipacion = Math.ceil((new Date(reserva.fechaIngreso) - new Date()) / (1000 * 60 * 60 * 24));
         const alertaMora = document.getElementById('alerta-mora');
 
-        if (diasAnticipacion <= 7) {
-            const moraEstimada = precioTotal * 0.50; 
+        const politicas = await ReservaService.obtenerPoliticaCancelacion();
+        const politica = politicas && politicas.length > 0 ? politicas[0] : null;
+
+        if (politica && diasAnticipacion <= politica.diasLimiteSinMora && diasAnticipacion >= 0) {
+            const moraEstimada = precioTotal * politica.porcentajePenalidad; 
             document.getElementById('cnc-monto-mora').textContent = `$${moraEstimada.toFixed(2)}`;
+            alertaMora.style.display = 'block';
+        } else if (!politica && diasAnticipacion <= 7) {
             alertaMora.style.display = 'block';
         } else {
             alertaMora.style.display = 'none';
